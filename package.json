@@ -1,0 +1,26 @@
+{
+  "name": "chatbot-thesis",
+  "version": "1.0.0",
+  "description": "Bachelor Thesis - Chatbots: Development and Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "gitbook install",
+    "start": "gitbook serve thesis static",
+    "build": "npm run web && npm run pdf",
+    "web": "gitbook build thesis static",
+    "pdf": "gitbook pdf thesis 'Chatbots - Development and Application.pdf'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorinvo/chatbot-thesis.git"
+  },
+  "author": "Jorin Vogel",
+  "bugs": {
+    "url": "https://github.com/jorinvo/chatbot-thesis/issues"
+  },
+  "homepage": "https://github.com/jorinvo/chatbot-thesis#readme",
+  "dependencies": {
+    "gitbook-cli": "^2.3.0"
+  }
+}
