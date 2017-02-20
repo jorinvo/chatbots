@@ -9,7 +9,7 @@
     "start": "gitbook serve thesis static",
     "build": "npm run web && npm run pdf",
     "web": "gitbook build thesis static",
-    "pdf": "gitbook pdf thesis 'Chatbots - Development and Application.pdf'"
+    "pdf": "gitbook pdf thesis 'out/Chatbots - Development and Application.pdf'"
   },
   "repository": {
     "type": "git",
