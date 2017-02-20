@@ -1,2 +1,2 @@
-Definition of Use-Cases
+Definition of "Chatbot"
 =======================
