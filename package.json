@@ -4,7 +4,6 @@
   "description": "Bachelor Thesis - Chatbots: Development and Application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "install": "gitbook install",
     "start": "gitbook serve content public",
     "build": "npm run web && npm run pdf",

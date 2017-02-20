@@ -2,7 +2,7 @@ Summary
 =======
 
 -	[Preface](preface.md)
--	[Definition of "Chatbot"](definition-chatbot.md)
+-	[Definition of the Term "Chatbot"](definition-chatbot.md)
 -	[About Conversational and Text-based Interfaces](conversational-and-text-interfaces.md)
 -	[History](history.md)
 -	[Application](application/readme.md)
