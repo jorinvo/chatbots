@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "gitbook install",
-    "start": "gitbook serve thesis static",
+    "start": "gitbook serve content public",
     "build": "npm run web && npm run pdf",
-    "web": "gitbook build thesis static",
-    "pdf": "gitbook pdf thesis 'out/Chatbots - Development and Application.pdf'"
+    "web": "gitbook build content public",
+    "pdf": "gitbook pdf content 'public/Chatbots - Development and Application.pdf'"
   },
   "repository": {
     "type": "git",
