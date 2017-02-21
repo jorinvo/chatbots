@@ -1,8 +1,21 @@
 language: node_js # run `npm install` and `npm test`
 node_js: node # use the latest version via nvm
 sudo: false # allow Travis to run this project in container
-deploy:
-  provider: script
-  script: deploy.sh
-  on:
-    branch: master
+branches:
+  only: master
+after_success:
+  - npm run build
+  - git clone --depth=1 --branch=public git@github.com:jorinvo/chatbots.git public-branch
+  - cd public-branch
+  # Remove old files
+  - git rm -qr .
+  # Commit new files
+  - mv ../public/* .
+  - git add --all
+  # For debugging
+  - git status
+  # Push changes
+  - git config user.email "bot@qvl.io"
+  - git config user.name "CI Bot"
+  - 'git commit -am "$(date)"'
+  - git push origin public
