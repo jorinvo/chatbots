@@ -4,7 +4,7 @@
   "description": "Bachelor Thesis - Chatbots: Development and Application",
   "main": "index.js",
   "scripts": {
-    "install": "gitbook install && npm run build",
+    "install": "gitbook install",
     "start": "gitbook serve content public",
     "build": "npm run web && npm run pdf",
     "web": "gitbook build content public",

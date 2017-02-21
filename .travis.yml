@@ -1,0 +1,8 @@
+language: node_js # run `npm install` and `npm test`
+node_js: node # use the latest version via nvm
+sudo: false # allow Travis to run this project in container
+deploy:
+  provider: script
+  script: deploy.sh
+  on:
+    branch: master
