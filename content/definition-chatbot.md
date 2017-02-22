@@ -6,12 +6,12 @@ The term "chatbot" consists of two parts - "chat" and "bot". The meaning can be 
 Definition of the Term "Chat"
 -----------------------------
 
-(Oxford)
+(Oxford + interpretation)
 
 Definition of the Term "Bot"
 ----------------------------
 
-(Oxford)
+(Oxford + interpretation)
 
 Combination and Applied Definition
 ----------------------------------

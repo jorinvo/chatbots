@@ -1,4 +1,11 @@
-# Bachelor Thesis - Chatbots: Development and Application
+Bachelor of Science
+-------------------
 
-hi
+Chatbots: Development and Application
+=====================================
 
+### Jorin Vogel
+
+### HTW Berlin, International Media and Computing
+
+**Advisors**: Prof. Dr. Gefei Zhang and Prof. Dr.-Ing. Carsten Busch
