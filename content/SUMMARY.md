@@ -23,3 +23,4 @@ Summary
 	-	[(2) Obstacles and Limitations](development/obstacles-and-limitations.md)
 -	[(3) Conclusions](conclusions.md)
 -	[(2) Outlook and Possibilities](outlook-and-possibilities.md)
+-	[References](references.md)
