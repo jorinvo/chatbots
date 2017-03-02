@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "install": "gitbook install",
-    "start": "gitbook serve content public",
+    "start": "gitbook serve . public",
     "build": "npm run web && npm run pdf",
-    "web": "gitbook build content public",
-    "pdf": "gitbook pdf content 'public/Chatbots - Development and Application.pdf'"
+    "web": "gitbook build . public",
+    "pdf": "gitbook pdf . 'public/chatbots-development-and-application.pdf'"
   },
   "repository": {
     "type": "git",
