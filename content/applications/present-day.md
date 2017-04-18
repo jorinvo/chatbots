@@ -4,9 +4,9 @@ Present day
 With more than 60 years of history the concept of chatbots is not new.
 <br>
 People have been fascinated with the idea of being able to *talk to computers* since a long time;
-but past attempts have mostly been simple experiments or applications focused on the aspect of entertainment associated with a science fiction inspired intelligent machine.
+but past attempts have mostly been simple experiments or applications focused on the aspect of entertainment associated with science fiction inspired roboters.
 
-However, lately industry and press seem to be increasingly interested in the topic of conversational interfaces.
+However, lately industry and press are increasingly interested in the topic of conversational interfaces.
 <br>
 The reinforced interest can be explained by observing recent developments of technology and recent market trends.
 

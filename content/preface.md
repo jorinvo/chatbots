@@ -1,6 +1,8 @@
 Preface
 =======
 
+### Notes
+
 -	What's the problem to be solved?
 -	Why is it a problem?
 -	How do I intent to solve it?

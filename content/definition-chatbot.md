@@ -1,12 +1,12 @@
 Definition of the Term "Chatbot"
 ================================
 
-Before working on a topic it is necessary to have a clear common understanding of its definition.
+Before working on a topic it is necessary to have common definitions of its vocabulary.
 This section will help aligning previous assumptions.
 
 The term "chatbot" consists of two parts - "chat" and "bot". The meaning can be better understood after examining the two components separately.
 
-Oxford dictionary defines **"chat"** as *"an informal conversation"* and more specifically as *"the online exchange of messages in real time with one or more simultaneous users of a computer network"*.[^1]
+The Oxford dictionary defines **"chat"** as *"an informal conversation"* and more specifically as *"the online exchange of messages in real time with one or more simultaneous users of a computer network"*.[^1]
 <br>
 As apparent in this definition conversations play a central role in *chats* and therefore *chatbots*.
 But before examining what characterizes a conversation other noteworthy aspects of this definition are the inherent *informal* format of a *chat*, and the traits of being *online* and *real time*.

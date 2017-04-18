@@ -1,6 +1,8 @@
 Technical Details of Input Processing and Decision Making
 =========================================================
 
+### Notes
+
 This part will be about the NLP and machine learning tools and techniques used.
 
 The introduction of the utilized tools will be followed by an explanation of how the different parts and algorithms work.

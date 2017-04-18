@@ -1,6 +1,8 @@
 Platform Evaluation
 ===================
 
+### Notes
+
 Bot platforms have been listed in previous chapter.
 
 Now the most suitable one should be selected for the following implementation.

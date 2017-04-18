@@ -2,11 +2,11 @@ Summary
 =======
 
 -	[(1) Preface](preface.md)
--	[(1) Definition of the Term "Chatbot"](definition-chatbot.md)
--	[(1) About Conversational Interfaces](conversational-interfaces.md)
--	[(1) Applications](applications/readme.md)
-	-	[(2) History and Past Work](history.md)
-	-	[(1) Present Day](applications/present-day.md)
+-	[(1) + Definition of the Term "Chatbot"](definition-chatbot.md)
+-	[(1) + About Conversational Interfaces](conversational-interfaces.md)
+-	[(1) + Applications](applications/readme.md)
+	-	[(2) + History and Past Work](history.md)
+	-	[(1) + Present Day](applications/present-day.md)
 	-	[(2) Platforms](applications/platforms.md)
 	-	[(2) Products](applications/products.md)
 	-	[(1) Companies](applications/companies.md)

@@ -1,6 +1,8 @@
 Development
 ===========
 
+### Notes
+
 -	Create an example for what a chatbot is
 -	What parts does a chatbot consists of?
 -	How can you implement these parts?

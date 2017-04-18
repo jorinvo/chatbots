@@ -1,6 +1,8 @@
 Definition of Use Cases
 =======================
 
+### Notes
+
 Features from previous synopsis should be expressed as user stories instead:
 
 -	The software should not be restricted to specific languages.

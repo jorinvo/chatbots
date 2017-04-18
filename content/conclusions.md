@@ -1,6 +1,8 @@
 Conclusions
 ===========
 
+### Notes
+
 -	Retrospecive looking on the previous stated potentials and promises
 -	What worked well?
 -	What didn't?

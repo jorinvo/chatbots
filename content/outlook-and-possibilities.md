@@ -1,6 +1,8 @@
 Outlook and Possibilities
 =========================
 
+### Notes
+
 -	How can I further develop the language studying application?
 -	What new platforms could be interesting for this product?
 -	Which other applications are chatbots useful for that we don't have nowadays?

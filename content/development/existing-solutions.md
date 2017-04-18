@@ -1,6 +1,8 @@
 Existing Solutions
 ==================
 
+### Notes
+
 -	Categories of language learning applications
 -	Sample of existing applications
 -	Dictionaries and Translation

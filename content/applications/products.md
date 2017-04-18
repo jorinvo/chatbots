@@ -1,6 +1,8 @@
 Products
 ========
 
+### Notes
+
 -	Sumarize current product categories
 -	Most popular chatbots
 -	Innovative use cases

@@ -1,6 +1,8 @@
 Usage of Chatbots
 =================
 
+### Notes
+
 -	How are people actually using chatbots?
 -	Who is using them?
 -	What are current chat bots good at?

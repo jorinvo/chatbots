@@ -1,6 +1,8 @@
 Platforms
 =========
 
+### Notes
+
 -	Find some usage numbers - possibly by region as well
 -	Explore bot capabilities
 
