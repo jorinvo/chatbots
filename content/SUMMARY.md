@@ -5,7 +5,7 @@ Summary
 -	[(1) + Definition of the Term "Chatbot"](definition-chatbot.md)
 -	[(1) + About Conversational Interfaces](conversational-interfaces.md)
 -	[(1) + Applications](applications/readme.md)
-	-	[(2) + History and Past Work](history.md)
+	-	[(2) + History and Past Work](applications/history.md)
 	-	[(1) + Present Day](applications/present-day.md)
 	-	[(2) Platforms](applications/platforms.md)
 	-	[(2) Products](applications/products.md)

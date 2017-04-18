@@ -18,15 +18,15 @@ Picturing a *conversational* interface one might expect a flow of interactions c
 It should also be noted that conversations are not limited to written language. Spoken language is also a possible interface for communication.
 <br>
 
-Focusing on written, text-based communication it becomes apparent that not all text-based interfaces fit the characteristics of a *conversational interface*.
+Focusing on written, text-based communication, it becomes apparent that not all text-based interfaces fit the characteristics of a *conversational interface*.
 <br>
-The classical command line interfaces often used to interact with computers are one example of what differentiates conversational interfaces.
-As implied in the naming these interfaces use *commands* for interaction.
+Classical command line interfaces often used to interact with computers are one example of text-based interfaces which don't have the attributes of conversational interfaces.
+As implied in the naming, these interfaces use *commands* for interaction.
 A command is an *"authoritative order"* [^2] which contrasts with a conversation.
 <br>
 The term *conversation* has a connotation of complex, non-linear communication where each involved party understands the underlaying ideas communicated opposed to merely receiving the characters the words consist of.
 
-This deeper understanding of the intends a user has and the ability to adjust the interaction with a conversation consisting of customized parts sets conversational interfaces and thus chatbots apart from other interfaces.
+This deeper understanding of the intends a user has and the ability to adjust the interaction with a conversation consisting of customized parts sets conversational interfaces, and thus chatbots, apart from other interfaces.
 
 
 
