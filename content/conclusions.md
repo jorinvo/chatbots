@@ -21,3 +21,7 @@ After I present the finished product, I would like to compare the chatbot with t
 -	How does the user benefit from the conversational user interface?
 -	Which implementation is easier to use?
 -	Which steps of the development process have been simpler?
+
+
+https://www.theregister.co.uk/2017/02/22/facebook_ai_fail/
+http://whoo.ps/2015/02/23/futures-of-text

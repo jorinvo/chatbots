@@ -17,3 +17,8 @@ Will only look at a few platforms selected as most promising:
 -	Skype (mostly for business)
 -	Siri has no public API
 -	Alexa (via audio)
+
+http://www.topbots.com/essential-landscape-overview-enterprise-artificial-intelligence/
+https://github.com/BotCube/awesome-bots
+https://chatfuel.com/
+https://morph.ai/
