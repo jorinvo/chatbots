@@ -9,3 +9,4 @@ Companies
 -	How are they involved?
 
 http://fortune.com/ai-artificial-intelligence-deep-machine-learning/
+http://www.topbots.com/essential-landscape-overview-enterprise-artificial-intelligence/

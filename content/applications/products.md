@@ -16,3 +16,5 @@ https://florence.chat/
 https://operator.com/
 https://mailclark.ai/
 https://sensay.it/
+
+https://github.com/BotCube/awesome-bots
