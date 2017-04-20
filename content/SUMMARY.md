@@ -7,7 +7,7 @@ Summary
 -	[(1) + Applications](applications/readme.md)
 	-	[(2) + History and Past Work](applications/history.md)
 	-	[(1) + Present Day](applications/present-day.md)
-	-	[(2) Platforms](applications/platforms.md)
+	-	[(2) + Platforms](applications/platforms.md)
 	-	[(2) Products](applications/products.md)
 	-	[(1) Companies](applications/companies.md)
 	-	[(3) Usage of Chatbots](applications/usage.md)
