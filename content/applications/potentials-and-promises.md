@@ -9,3 +9,4 @@ Potentials and Promises
 -	Do chatbots enable new markets?
 
 https://www.techinasia.com/chatbots-and-startups
+https://chatbotbook.com/the-rise-of-intelligent-bots-e896cde7281b

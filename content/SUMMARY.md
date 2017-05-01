@@ -1,10 +1,10 @@
 Summary
 =======
 
--	[(1) Preface](preface.md)
--	[(1) + Definition of the Term "Chatbot"](definition-chatbot.md)
--	[(1) + About Conversational Interfaces](conversational-interfaces.md)
+-	[(1) Introduction](introduction.md)
 -	[(1) + Applications](applications/readme.md)
+  -	[(1) + Definition of the Term "Chatbot"](applications/definition-chatbot.md)
+  -	[(1) + About Conversational Interfaces](applications/conversational-interfaces.md)
 	-	[(2) + History and Past Work](applications/history.md)
 	-	[(1) + Present Day](applications/present-day.md)
 	-	[(2) + Platforms](applications/platforms.md)
@@ -17,6 +17,7 @@ Summary
 	-	[(2) Existing Solutions](development/existing-solutions.md)
 	-	[(4) Definition of Use Cases](development/use-cases.md)
 	-	[(1) Platform Evaluation](development/platform-evaluation.md)
+	-	[(1) Natural Language Processing](development/nlp.md)
 	-	[(1) Setup Overview](development/setup-overview.md)
 	-	[(6) Feature Implementation](development/feature-implementation.md)
 	-	[(2) Technical Details of Input Processing and Decision Making](development/technical-details.md)

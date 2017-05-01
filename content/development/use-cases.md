@@ -46,3 +46,9 @@ Features from previous synopsis should be expressed as user stories instead:
 > -	bot: Send me the phrase you would like to add.
 > -	user: Hello guys!
 > -	bot: Please send me the
+
+
+
+
+https://chatbotsmagazine.com/does-a-bot-need-natural-language-processing-c2f76ab7ef11
+https://chatbotsmagazine.com/10-most-popular-words-users-send-to-chatbots-98fc18a80b4a
