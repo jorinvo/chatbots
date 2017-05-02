@@ -10,3 +10,4 @@ Companies
 
 http://fortune.com/ai-artificial-intelligence-deep-machine-learning/
 http://www.topbots.com/essential-landscape-overview-enterprise-artificial-intelligence/
+https://github.com/BotCube/awesome-bots

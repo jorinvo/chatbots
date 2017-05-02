@@ -89,12 +89,12 @@ Many systems are instead optimized to provide quick and efficient interactions a
 
 
 
-[^1]: http://www.turing.org.uk/scrapbook/test.html
-[^2]: http://www.masswerk.at/elizabot/eliza_test.html
+[^1]: https://web.archive.org/web/20170402202214/http://www.turing.org.uk/scrapbook/test.html
+[^2]: https://web.archive.org/web/20160706215456/http://www.masswerk.at:80/elizabot/eliza_test.html
 [^3]: http://www.bbc.co.uk/blogs/adamcurtis/entries/78691781-c9b7-30a0-9a0a-3ff76e8bfe58
 [^4]: Weizenbaum, Joseph (1976). Computer power and human reason: from judgment to calculation. W. H. Freeman. p. 7.
-[^5]: http://www.computerhistory.org/internethistory/1970s/
-[^6]: http://www.jabberwacky.com/j2about
+[^5]: https://web.archive.org/web/20170403064334/http://www.computerhistory.org/internethistory/1970s/
+[^6]: https://web.archive.org/web/20170109021141/http://www.jabberwacky.com/j2about
 [^7]: https://books.google.co.th/books?id=fpQP3e54P-gC
-[^8]: http://www.nytimes.com/2002/07/07/magazine/approximating-life.html
-[^9]: http://www.aaai.org/Library/AAAI/aaai94contents.php
+[^8]: https://web.archive.org/web/20161228145312/http://www.nytimes.com/2002/07/07/magazine/approximating-life.html
+[^9]: https://web.archive.org/web/20160821113511/http://www.aaai.org:80/Library/AAAI/aaai94contents.php
