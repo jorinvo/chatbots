@@ -11,7 +11,7 @@ Summary
 	-	[+ Products](applications/products.md)
 		-	[? (Innovative Ideas)](applications/innovative-ideas.md)
 	-	[? Companies](applications/companies.md)
-	-	[? Usage of Chatbots](applications/usage.md)
+	-	[? (Usage of Chatbots)](applications/usage.md)
 	-	[? Potentials and Promises](applications/potentials-and-promises.md)
 -	[? Development](development/readme.md)
 	-	[? Choosing a Practical Example](development/practical-example.md)
