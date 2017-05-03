@@ -1,11 +1,97 @@
-\input{_layout.tex}
+% \documentclass[12pt, openright]{report}
+\documentclass[12pt, headinclude, parskip=half+, numbers=noenddot, openright]{scrreprt}
+% PDF-Kompression
+\pdfminorversion=5
+\pdfobjcompresslevel=1
+% Allgemeines
+\usepackage[automark]{scrpage2} % Kopf- und Fußzeilen
+% \usepackage{amsmath,marvosym} % Mathesachen
+\usepackage[T1]{fontenc} % Ligaturen, richtige Umlaute im PDF
+\usepackage[utf8]{inputenc}% UTF8-Kodierung für Umlaute usw
+% Schriften
+\usepackage{setspace} % Zeilenabstand
+\usepackage{titlesec}
+\onehalfspacing % 1,5 Zeilen
+% Schriften-Größen
+\setkomafont{chapter}{\Large\rmfamily} % Überschrift der Ebene
+\setkomafont{section}{\large\rmfamily}
+\setkomafont{subsection}{\large\rmfamily}
+\setkomafont{subsubsection}{\normalsize\rmfamily}
+\setkomafont{chapterentry}{\large\rmfamily} % Überschrift der Ebene in Inhaltsverzeichnis
+\setkomafont{descriptionlabel}{\bfseries\rmfamily} % für description Umgebungen
+\setkomafont{captionlabel}{\small\bfseries}
+\setkomafont{caption}{\small}
+% Language: English
+\usepackage[english]{babel}
+% PDF
+\usepackage[final]{microtype} % mikrotypographische Optimierungen
+\usepackage{float}
+\usepackage{url} % ermögliche Links (URLs)
+\usepackage{pdflscape} % einzelne Seiten drehen können
+\usepackage{hyperref}
+% Tabellen
+\usepackage{multirow} % Tabellen-Zellen über mehrere Zeilen
+\usepackage{multicol} % mehre Spalten auf eine Seite
+\usepackage{tabularx} % Für Tabellen mit vorgegeben Größen
+\usepackage{longtable} % Tabellen über mehrere Seiten
+\usepackage{array}
+%  Bibliographie
+% Sort by order of appearance in document
+\usepackage[sorting=none]{biblatex}
+% Bilder
+\usepackage{graphicx} % Bilder
+\usepackage{color} % Farben
+\graphicspath{{images/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg} % bevorzuge pdf-Dateien
+\usepackage{subcaption}  % mehrere Abbildungen nebeneinander/übereinander
+\usepackage[all]{hypcap} % Beim Klicken auf Links zum Bild und nicht zu Caption gehen
+% Bildunterschrift
+\setcapindent{0em} % kein Einrücken der Caption von Figures und Tabellen
+\setcapwidth{0.9\textwidth} % Breite der Caption nur 90% der Textbreite, damit sie sich vom restlichen Text abhebt
+\setlength{\parskip}{0pt}
+\setlength{\abovecaptionskip}{0.2cm} % Abstand der zwischen Bild- und Bildunterschrift
+% Quellcode
+% für Formatierung in Quelltexten, hier im Anhang
+\usepackage{listings}
+\definecolor{grau}{gray}{0.25}
+\lstset{
+	extendedchars=true,
+	basicstyle=\normalsize\ttfamily,
+	tabsize=2,
+	keywordstyle=\textbf,
+	commentstyle=\color{grau},
+	stringstyle=\textit,
+	numbers=left,
+	numberstyle=\tiny,
+	% für schönen Zeilenumbruch
+	breakautoindent  = true,
+	breakindent      = 2em,
+	breaklines       = true,
+	postbreak        = ,
+	prebreak         = \raisebox{-.8ex}[0ex][0ex]{\Righttorque},
+}
+% linksbündige Fußboten
+\deffootnote{1.5em}{1em}{\makebox[1.5em][l]{\thefootnotemark}}
+
+\typearea{14} % typearea berechnet einen sinnvollen Satzspiegel (das heißt die Seitenränder) siehe auch http://www.ctan.org/pkg/typearea. Diese Berechnung befindet sich am Schluss, damit die Einstellungen oben berücksichtigt werden
+
+\usepackage{scrhack} % Vermeidung einer Warnung
+
+
+
+\addbibresource{references.bib}
+
+
 
 \begin{document}
+
+
+
 \pagenumbering{Roman}
 \pagestyle{empty} % remove header and footer for first page
 
 % title page
-\clearscrheadings\clearscrplain
+% \clearscrheadings\clearscrplain
 \begin{center}
 
 Thesis\\
@@ -39,6 +125,8 @@ Sommersemester 2017
 
 \pagestyle{useheadings} % enable header and footer for other pages
 
+
+
 \tableofcontents
 % \listoffigures
 % \listoftables
@@ -46,39 +134,31 @@ Sommersemester 2017
 \pagenumbering{arabic}
 % \input{chapters/01-introduction.tex}
 \input{chapters/02-definition-chatbot.tex}
-% \chapter{About Conversational Interfaces}
-% \input{chapters/03-conversational-interfaces.tex}
+\input{chapters/03-conversational-interfaces.tex}
+\input{chapters/04-applications.tex}
+\input{chapters/05-history.tex}
+\input{chapters/06-present-day.tex}
+\input{chapters/07-platforms.tex}
+\input{chapters/08-products.tex}
+% \input{chapters/09-innovative-ideas.tex}
+% \input{chapters/10-companies.tex}
+% \input{chapters/11-usage.tex}
+% \input{chapters/12-potentials-and-promises.tex}
+% \input{chapters/13-readme.tex}
+% \input{chapters/14-practical-example.tex}
+% \input{chapters/15-existing-solutions.tex}
+% \input{chapters/16-use-cases.tex}
+% \input{chapters/17-platform-evaluation.tex}
+% \input{chapters/18-setup-overview.tex}
+% \input{chapters/19-feature-implementation.tex}
+% \input{chapters/20-technical-details.tex}
+% \input{chapters/21-obstacles-and-limitations.tex}
+% \input{chapters/22-conclusions.tex}
+% \input{chapters/23-outlook-and-possibilities.tex}
+% \input{chapters/24-references.tex}
 
 
-\appendix
-\chapter{Appendix}
-
-\section{Beispielsnippet für eine VWO Integration}\label{vwo_integration}
-
-\hspace{1cm}
-\begin{minipage}{\linewidth}
-\begin{lstlisting}[caption=Beispielsnippet für eine VWO Integration, label=vwo_snippet]
-<!-- Start Visual Website Optimizer Asynchronous Code -->
-<script type='text/javascript'>
-var _vwo_code=(function(){
-var account_id=2842899,
-settings_tolerance=2000,
-library_tolerance=2500,
-use_existing_jquery=false,
-/* DO NOT EDIT BELOW THIS LINE */
-f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
-</script>
-<!-- End Visual Website Optimizer Asynchronous Code -->
-\end{lstlisting}
-\end{minipage}
-\hspace{1cm}
-
-
-
-
-\bibliographystyle{alphadin_martin}
-\bibliography{references}
-
+\printbibliography[heading=bibintoc]
 
 
 \chapter*{Erklärung}
