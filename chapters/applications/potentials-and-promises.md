@@ -1,3 +1,17 @@
+Potentials and Promises
+=======================
+
+### Notes
+
+-	Why do we need chatbots? What are they good for?
+-	How do they help users?
+-	How do they help companies?
+-	Do chatbots enable new markets?
+
+https://www.techinasia.com/chatbots-and-startups
+https://chatbotbook.com/the-rise-of-intelligent-bots-e896cde7281b
+
+
 Chatbots in Asia: these days, everyone’s getting chatty
 http://www.thedrum.com/opinion/2017/02/07/chatbots-asia-these-days-everyone-s-getting-chatty
 - Familiarity of users to messaging apps is a big advantage
@@ -5,7 +19,3 @@ http://www.thedrum.com/opinion/2017/02/07/chatbots-asia-these-days-everyone-s-ge
 - Rise of use-cases for booking and ordering services and products
 - Gather valuable user-behavior data
 
-CONVERSATIONAL BOTS TRANSFORM HOW YOU LEARN LANGUAGES
-http://www.topbots.com/duolingo-chatbots-app-change-way-you-learn-languages/
-Duolingo developed a a bot inside their app that you can have conversations
-with to imrpover your real-world usage while learning a language

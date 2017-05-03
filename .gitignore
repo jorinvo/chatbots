@@ -1,3 +1,13 @@
-node_modules
 .DS_Store
-public
+
+# Latex files
+chatbots.fdb_latexmk
+chatbots.synctex.gz
+chatbots.fls
+chatbots.lof
+chatbots.toc
+chatbots.aux
+chatbots.log
+chatbots.bbl
+chatbots.out
+chatbots.blg
