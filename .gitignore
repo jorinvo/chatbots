@@ -6,6 +6,7 @@ chatbots.fdb_latexmk
 chatbots.synctex.gz
 chatbots.fls
 chatbots.lof
+chatbots.lot
 chatbots.toc
 chatbots.aux
 chatbots.log
