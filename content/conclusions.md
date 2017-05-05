@@ -25,6 +25,8 @@ After I present the finished product, I would like to compare the chatbot with t
 -	Which steps of the development process have been simpler?
 
 
+Have to differentiate chatbots as in natural language from bots as in automating messenger services and text interfaces.
+
 https://www.theregister.co.uk/2017/02/22/facebook_ai_fail/
 http://whoo.ps/2015/02/23/futures-of-text
 http://botnerds.com/chatbots/
