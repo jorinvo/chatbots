@@ -1,7 +1,6 @@
 .DS_Store
 
 # Latex files
-chatbots.pdf
 chatbots.fdb_latexmk
 chatbots.synctex.gz
 chatbots.fls
