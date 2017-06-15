@@ -8,6 +8,12 @@ Conclusions
 -	What didn't?
 -	Also evaluating the technical merits drawbacks here
 
+conversational interfaces don't have to rely inputing natural language,
+conversations can also happen by providing possible answers,
+the flow still differs from apps,
+having this flow is more like telling a story,
+variation in responses helps to keep the user engaged.
+
 ---
 
 After I present the finished product, I would like to compare the chatbot with the classic application:

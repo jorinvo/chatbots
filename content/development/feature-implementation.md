@@ -7,3 +7,7 @@ Feature Implementation
 -	Show some screenshots for usage of features
 -	Explain how to use features
 -	Explain how each feature is implemented
+
+
+Could add subsection about testing here.
+How to test a bot seems kind of tricky.
