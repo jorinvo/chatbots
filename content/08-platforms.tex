@@ -61,5 +61,30 @@ Further popular messenger applications are the Japanese \emph{Line} Microsoft's 
 \\
 
 The choice of platform mostly depends on the target market. Different audiences prefer different platforms and a product might be better suited for certain environments.
-\\
+
+
+\subsection{Cross-platform}
+
 As with the creation of other software it is also possible to release the same chatbot software for multiple targets. In similar ways to other platforms, the interaction of the software with the platform has to conform to the technical details and protocols of each target, the usage of platform-specific features has to be adapted individually and the user experience needs to be designed to fit each environment's expectations.
+\\
+
+There are also existing frameworks that allow developers to develop a chatbot once and release it to multiple platforms at the same time, without any modifications for the individual platforms.
+\\
+One such framework is API.ai by Google. As of writing they support 16 different integrations, including platforms such as Facebook Messenger, Skye and Slack\cite{apiai}. However, this platform is more than an adapter to different platforms. It's an complete solution to developing chatbots. API.ai comes with built-in support for natural language processing. A chatbot is already able to have basic conversations out of the box. The developer can train the bot about new topics by just providing example conversations while the framework handles all of the language parsing.
+\\
+Detected keywords and intends can be forwarded to be handled with custom logic; although for simple use cases this might not be necessary and a chatbot can be developed without writing a single line of code.
+\\
+
+Still, there are limits of what can be achieved with a platform like API.ai.
+\\
+First, intend parsing is, in the case if API.ai, currently limited to a finite list of topics. If a chatbot is handling topics from a domain unknown to API.ai, this solution is not sufficient anymore.
+\\
+Further, developers have no control over the applied machine learning and natural language processing algorithms.
+There are no possibilities for customization, if the parsing results or the generated response do not match the requirements.
+\\
+Additionally, while API.ai currently supports 15 different languages, a chatbot is limited to the available languages.
+If an new language needs to be supported, a lot of work might be necessary switching to a custom solution.
+\\
+Another issue to keep in mind is, that, while API.ai has support for many platform-specific features such as custom formats for message content and quick reply buttons, there are unique features of single platforms that are not supported and since the space is evolving at such rapid pace future extentions might not be available either.
+\\
+As last point it should be mentioned that, even though API.ai is at the moment free to for everyone, they will very likely find a sustainable business model in the near futre. This business model could be charging for the service or, being part of Google, simply collecting data, binding customers and gaining market share. Regardless which monetization strategy is chosen, as a developer one has to be aware that this is a non-controllable, external dependency.
