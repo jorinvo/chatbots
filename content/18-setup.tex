@@ -1,0 +1,51 @@
+\section{Setup and Requirements}
+
+After knowing the features the chatbot should support,
+technical requirements can be extracted
+and appropriate technology has to be chosen for the implementation.
+
+
+\subsection{Communication}
+
+- what interactions are necessary?
+- possible actions are really limited
+- use of combination to cancel + other options
+- use of combination to provide both input methods in parallel
+
+
+\subsection{Platform}
+
+- platform (messenger)
+  - why
+    - Which features are helpful for the defined use cases?
+  - why not cross-platform
+    - storage
+    - notifications
+    - no need for nlp
+  - how communication works
+
+
+\subsection{Server}
+
+Since a user can save new vocabulary,
+there needs to be a way to store information for each user.
+\\
+For the studying itself, further information has to be stored.
+It is necessary to keep track of correct and incorrect guesses the user does while studying
+and to decide when to study next, the time of the last study needs to be tracked too.
+\\
+
+To be able to send users a notification message when their studies are ready,
+the system requires a way to schedule timers for the notifications.
+The timers need to be lightweight enough to be rescheduled for every user activity,
+since they can affect the time the notification is scheduled for.
+\\
+
+
+- language (go)
+- data storage (bolt)
+
+
+\subsection{Architecture}
+
+- architecture (+ Graphic)
