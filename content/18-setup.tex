@@ -89,7 +89,9 @@ but also because it offers mechanisms for interacting with chatbots via interfac
 which will be used in the next chapter to display action buttons in the user interface.
 \\
 
+
 \subsubsection{Integration}
+
 The development of a chatbot for Facebook Messenger is similar to most other platforms.
 \\
 When creating and configurating a chatbot, the developer registers a webhook URL.
@@ -102,8 +104,52 @@ This way the developer has complete control over how to handle each message on a
 
 \subsection{Server}
 
-\subsection{Data Model}
+At this point that the interaction with the platform is decided, the application can be created on a custom server,
+and it has to be decided to structure the application running on this server.
 
+
+\subsubsection{Programming Language}
+
+Since all interaction with the chatbot platform happens via HTTP,
+there is no restriction on which programming language to use as long as it can be executed through a web server.
+Chatbots can be written in any programming language.
+\\
+Depending on the specific application, different programming languages are better suited than others though.
+\\
+
+In the example case there are not any specific technology requirements.
+\\
+However, to be able to send notification messages to users when their studies are ready,
+the system requires a way to schedule timers for the notifications.
+The timers need to be lightweight enough to be re-scheduled for every user activity,
+that can affect the time the notification is scheduled for.
+\\
+Single-threaded programming languages, such as Python, Ruby or PHP,
+mostly use the pattern of using a separate worker process to handle scheduled jobs,
+but in this case there would need to be another process for each user
+just waiting until it is time to send notifications to the specific user.
+\\
+Another way to handle this in single-threaded programming languages is by using a system for \emph{asynchronous, evented I/O},
+such as the \emph{asyncio} module for Python\cite{asyncio} or the Node.js JavaScript runtime\cite{nodejs}.
+\\
+
+The example chatbot is created with the Go programming language\cite{golang}.
+\\
+Go is a multi-threaded language which allows for taking advantage of all available CPUs
+on a machine without the overhead of creating new processes.
+\\
+It is well suited for scheduling notifications and further Go has a robust web server in the standard library which can be exposed to the public Internet without a proxy server, that is common with the previous mentioned programming languages.
+By making use of this there is less parts to take care of and the example can be a simple and self-contained application.
+\\
+
+
+\subsubsection{Data Storage}
+
+Some applications do not store any data locally, but only process requests and send out replies.
+\\
+In the example case data needs to be stored and it should be stored locally on the same machine
+to keep the application as contained and simple as possible.
+\\
 
 Since a user can save new vocabulary,
 there needs to be a way to store information for each user.
@@ -113,17 +159,23 @@ It is necessary to keep track of correct and incorrect guesses the user does whi
 and to decide when to study next, the time of the last study needs to be tracked too.
 \\
 
-To be able to send users a notification message when their studies are ready,
-the system requires a way to schedule timers for the notifications.
-The timers need to be lightweight enough to be rescheduled for every user activity,
-since they can affect the time the notification is scheduled for.
+To send notification additional information has to be stored.
+It is necessary to know when the user was last active and if the user saw the last notification,
+since notifications should only be send when the user is not already active at this moment
+and when the user has not seen the last notification yet, no new one has to be sent either.
 \\
 
+All of the information required to be stored is always focused on a user.
+Users can never share information with each other.
+There are no complex relations between data.
+\\
+Without relational data there is not much use of features that relational databases such as MySQL or PostgreSQL provide;
+a simple key-value store can be sufficient for storing this data instead.
+\\
+The example uses an embedded key-value store called Bolt\cite{boltdb}.
+\\
+No separate process is needed for the database and data is saved on disk in a single file.
 
-- language (go)
-- data storage (bolt)
 
 
-\subsection{Architecture}
-
-- architecture (+ Graphic)
+This implementation and technical decisions are the base for the following description of the chatbot implementation.
