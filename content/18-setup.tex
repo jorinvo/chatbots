@@ -7,7 +7,7 @@ and appropriate technology can be chosen for the implementation.
 
 \subsection{Communication}
 
-As discussed in \ref{communication},
+As discussed in \ref{communication} on page \pageref{communication},
 there are two fundamental ways for communicating with a user,
 interface elements and natural language.
 \\
@@ -39,14 +39,65 @@ they are not necessary to explore the fundamentals and paradigms of chatbot deve
 
 \subsection{Platform}
 
-- platform (messenger)
-  - why
-    - Which features are helpful for the defined use cases?
-  - why not cross-platform
-    - storage
-    - notifications
-    - no need for nlp
-  - how communication works
+An important question to answer when development a chatbot is which platform to target.
+As shown in \ref{platforms} on page \pageref{platforms} there are many possible target platforms
+and some are fundamentally different.
+\\
+
+Deciding for a voice-based platform like Alexa, or for SMS or a messenger platform has consequences
+for all other decisions.
+\\
+For the case of the example chatbot, while possible, a voice-based interface is rather unsuitable since
+users should be able to control the precise spelling of the vocabulary
+and further, there is currently no voice-based platform available
+that supports multiple languages simultaneously.
+\\
+
+SMS communication is better suited for scenarios that only need to send a low number of messages,
+since, although the prices are pretty low, there are costs for sending text messages.
+\\
+As of writing, Twilio charges \$0.0075 for receiving and \$0.085 for sending per message when using their Global Short Message Service API in Germany\cite{twilio}.
+\\
+Supposed the chatbot has 1000 active users that all study 100 phrases daily,
+the costs would accumulate to \$277500 of monthly expenses\footnote{1000\times100\times30\times(0.085+0.0075)=277500}.
+These prices are affordable if a company is selling airplane and send tickets directly to users' phones,
+but in other scenarios another messaging platform is more suited.
+\\
+
+By choosing a messaging application as target platform, there are no monthly costs to be taken care of.
+Additionally there are further interface elements for interaction available than only plain text.
+But there are many major existing messaging applications and the choice can be difficult.
+As we saw earlier, different platforms have geographically different target markets.
+If a chatbot targets the Chinese Market WeChat would be the obvious platform to choose;
+likewise Japan would be targeted by using Line.
+\\
+In North America and Europe Facebook Messenger and Facebook's WhatsApp are currently the leading platforms.
+Since as of writing WhatsApp does not provide a publicly available API, Facebook Messenger is the biggest platform one can target.
+\\
+By creating the first version of the example chatbot with English as an interface language,
+the target markets are mainly North America, Europe and Australia and therefore Facebook Messenger would be a natural fit as target platform.
+\\
+
+As mentioned in \ref{crossplatform} on page \pageref{crossplatform}, there are also solutions to create chatbots using a framework which allows to release the chatbot to multiple platforms at the same time, but as previously noted such a framework also has drawbacks.
+\\
+With the limitations in mind and to keep the example as simple as possible,
+it will be implemented for a single platform without abstracting the process by using third-party frameworks.
+\\
+
+Facebook Messenger is a fitting platform not only due to popularity,
+but also because it offers mechanisms for interacting with chatbots via interface elements,
+which will be used in the next chapter to display action buttons in the user interface.
+\\
+
+\subsubsection{Integration}
+The development of a chatbot for Facebook Messenger is similar to most other platforms.
+\\
+When creating and configurating a chatbot, the developer registers a webhook URL.
+``The concept of a WebHook is simple. A WebHook is an HTTP callback: an HTTP POST that occurs when something happens; a simple event-notification via HTTP POST.''\cite{webhook}
+\\
+After the setup is done,
+Facebook will now send an HTTP POST request to the registered URL containing event information for every message a user sends to the chatbot.
+This way the developer has complete control over how to handle each message on any machine that is reachable via a public URL.
 
 
 \subsection{Server}
