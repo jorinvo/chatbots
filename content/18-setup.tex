@@ -2,16 +2,40 @@
 
 After knowing the features the chatbot should support,
 technical requirements can be extracted
-and appropriate technology has to be chosen for the implementation.
+and appropriate technology can be chosen for the implementation.
 
 
 \subsection{Communication}
 
-- what interactions are necessary?
-- possible actions are really limited
-- use of combination to cancel + other options
-- use of combination to provide both input methods in parallel
+As discussed in \ref{communication},
+there are two fundamental ways for communicating with a user,
+interface elements and natural language.
+\\
 
+Since the previous defined features for the minimal viable product of the example chatbot are so basic,
+there are not many options required and everything can be represented in an unambitious interface.
+\\
+
+The precise actions necessary to be defined are shown in the next section.
+For now it should be sufficient to know that all of them can be represented as predefined actions.
+\\
+However guiding the user with interface elements instead of natural language
+does not imply that natural language can not be used complimentary.
+\\
+Quite the contrary, the example chatbot is only possible by analyzing user input;
+when adding new vocabulary phrases and their explanations need to be captured,
+and likewise the user's guess needs to be evaluated when studying.
+\\
+
+The implementation of this chatbot demonstrates the complementing use of interface elements and natural language side by side.
+\\
+
+By relying only on simple input parsing and no advanced artificial intelligence based natural language processing techniques,
+a major source of complexity of chatbot development can be avoided.
+\\
+While these are useful techniques that enable previous impossible use cases,
+they are not necessary to explore the fundamentals and paradigms of chatbot development.
+\\
 
 \subsection{Platform}
 
@@ -26,6 +50,9 @@ and appropriate technology has to be chosen for the implementation.
 
 
 \subsection{Server}
+
+\subsection{Data Model}
+
 
 Since a user can save new vocabulary,
 there needs to be a way to store information for each user.
