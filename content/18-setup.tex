@@ -89,6 +89,17 @@ but also because it offers mechanisms for interacting with chatbots via interfac
 which will be used in the next chapter to display action buttons in the user interface.
 \\
 
+The registration and configuration of a chatbot for Facebook Messenger is not explained in detail here,
+since the Facebook's own online documentation already covers detailed explanations
+and the majority of the settings are specific to each chatbot.
+\\
+It should be noted that Facebook refers to a chatbot in Messenger simply as \emph{bot},
+and to create a Messenger bot it is required to first create a \emph{Facebook Page} and an \emph{application} for the page.
+Afterwards \emph{Messenger} can be added as a \emph{product} to the application.
+\\
+Further information can be found in the developer documentation at https://developers.facebook.com/products/messenger.
+How authentication works is explained in \ref{implementation} on page \pageref{implementation}.
+
 
 \subsubsection{Integration}
 
@@ -138,7 +149,7 @@ The example chatbot is created with the Go programming language\cite{golang}.
 Go is a multi-threaded language which allows for taking advantage of all available CPUs
 on a machine without the overhead of creating new processes.
 \\
-It is well suited for scheduling notifications and further Go has a robust web server in the standard library which can be exposed to the public Internet without a proxy server, that is common with the previous mentioned programming languages.
+It is well suited for scheduling notifications and further, Go has a robust web server in the standard library which can be exposed to the public Internet without a proxy server, that is common with the previous mentioned programming languages.
 By making use of this there is less parts to take care of and the example can be a simple and self-contained application.
 \\
 
@@ -178,4 +189,4 @@ No separate process is needed for the database and data is saved on disk in a si
 
 
 
-This implementation and technical decisions are the base for the following description of the chatbot implementation.
+These technical decisions are the base for the following description of the chatbot implementation.
