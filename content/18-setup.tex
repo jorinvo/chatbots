@@ -59,7 +59,7 @@ since, although the prices are pretty low, there are costs for sending text mess
 As of writing, Twilio charges \$0.0075 for receiving and \$0.085 for sending per message when using their Global Short Message Service API in Germany\cite{twilio}.
 \\
 Supposed the chatbot has 1000 active users that all study 100 phrases daily,
-the costs would accumulate to \$277500 of monthly expenses\footnote{1000\times100\times30\times(0.085+0.0075)=277500}.
+the costs would accumulate to \$277500 of monthly expenses\footnote{$1000\times100\times30\times(0.085+0.0075)=277500$}.
 These prices are affordable if a company is selling airplane and send tickets directly to users' phones,
 but in other scenarios another messaging platform is more suited.
 \\
@@ -183,7 +183,7 @@ There are no complex relations between data.
 Without relational data there is not much use of features that relational databases such as MySQL or PostgreSQL provide;
 a simple key-value store can be sufficient for storing this data instead.
 \\
-The example uses an embedded key-value store called Bolt\cite{boltdb}.
+The example uses an embedded key-value store called BoltDB\cite{boltdb}.
 \\
 No separate process is needed for the database and data is saved on disk in a single file.
 

@@ -41,9 +41,7 @@
 % Bilder
 \usepackage{graphicx} % Bilder
 \usepackage{color} % Farben
-\graphicspath{{images/}}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg} % bevorzuge pdf-Dateien
-\usepackage{subcaption}  % mehrere Abbildungen nebeneinander/übereinander
+\usepackage{wrapfig}
 \usepackage[all]{hypcap} % Beim Klicken auf Links zum Bild und nicht zu Caption gehen
 % Bildunterschrift
 \setcapindent{0em} % kein Einrücken der Caption von Figures und Tabellen
@@ -72,6 +70,8 @@
 }
 % linksbündige Fußboten
 \deffootnote{1.5em}{1em}{\makebox[1.5em][l]{\thefootnotemark}}
+% prevent footnotes from being split over multiple pages
+\interfootnotelinepenalty=10000
 
 \typearea{14} % typearea berechnet einen sinnvollen Satzspiegel (das heißt die Seitenränder) siehe auch http://www.ctan.org/pkg/typearea. Diese Berechnung befindet sich am Schluss, damit die Einstellungen oben berücksichtigt werden
 
@@ -141,23 +141,19 @@ July 29, 2017
 \input{content/03-definition-chatbot.tex}
 \input{content/04-conversational-interfaces.tex}
 \input{content/05-applications.tex}
-% TODO: Too many sections starting with "P"
 \input{content/06-past-work.tex}
 \input{content/07-present-day.tex}
 \input{content/08-communication.tex}
 \input{content/09-platforms.tex}
 \input{content/10-classification.tex}
-% TODO: skip these 3 chapters for now, maybe I don't even need them
-% \input{content/10-innovative-ideas.tex}
-% \input{content/11-companies.tex}
-% \input{content/12-usage.tex}
 \input{content/13-promises.tex}
 \input{content/14-development.tex}
 \input{content/15-practical-example.tex}
 \input{content/16-existing-solutions.tex}
 \input{content/17-use-cases.tex}
 \input{content/18-setup.tex}
-\input{content/19-feature-implementation.tex}
+\input{content/19-features.tex}
+% \input{content/20-server.tex}
 % \input{content/21-obstacles-and-limitations.tex}
 % \input{content/22-conclusions.tex}
 % \input{content/23-outlook-and-possibilities.tex}
