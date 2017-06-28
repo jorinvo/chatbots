@@ -181,6 +181,9 @@ The platform policy of Facebook Messenger clearly states to
 which means there needs to be a way for users to disable the sending of notifications;
 and further the platform policy clarifies that ``you may message people within 24 hours of a person's interaction with your business or Bot ..., and until the next interaction, you may send one additional message after this 24 hour period in order to follow up on your conversation.''\cite{fbpolicy}
 \\
+How to disable notifications in Studybot is not further explained here,
+but an illustration of the feature can be found in the appendix in figure \ref{fig:10-disable-notify} on page \pageref{fig:10-disable-notify}.
+\\
 
 \begin{figure}[h]
   \centering
@@ -189,7 +192,7 @@ and further the platform policy clarifies that ``you may message people within 2
 	\label{fig:08-study-done}
 \end{figure}
 
-In figure \ref{fig:07-notify-study} a notification on form the Messenger application on the mobile phone is how.
+In figure \ref{fig:07-notify-study} a notification in from the Messenger application on the mobile phone is shown.
 It is triggered when studies are ready for review.
 \\
 When opening the conversation with the chatbot,
@@ -219,6 +222,35 @@ In this case it is helpful to have the most used action on the right side, since
 therefore can reach the button with the thumb with less effort when using a mobile phone single-handed.
 \\
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{images/interface/09-feedback.png}
+	\caption{Send feedback and receive a reply}
+	\label{fig:09-feedback}
+\end{figure}
+
+\label{slackhook}
+
+A feature, that is outside of the main flow of using the chatbot, is the sending of feedback to the developers of the chatbot.
+\\
+As shown in figure \ref{fig:09-feedback}, it can be accessed after pressing the \emph{help} button.
+\\
+This feature is not specific to language studying and it is useful for most chatbots.
+Normally all replies are sent automated by the chatbot,
+but there should be a way users can talk to the developers or administrators that provide the chatbot.
+\\
+In the particular case of this chatbot the feature is automated by sending the messages users send as \emph{feedback}
+to a Slack channel\cite{slack}.
+Additionally administrators and developers can directly reply to user messages inside Slack
+and the messages is forwarded to the correct Facebook user within the chatbot.
+\\
+Figure \ref{fig:09-feedback} shows the flow for sending feedback from a user's point of view.
+\\
+The exact implementation is hidden from users,
+but simplifying the sending of replies by using an existing medium like Slack,
+can minimize the manual work required to maintain a personal feature like this.
+\\
+
 
 With this the primary interactions for the example chatbot are covered.
 \\
@@ -227,10 +259,7 @@ addressing the user by name,
 sending text in small chunks with a time of delay in between,
 prompting the user for specific input with every message,
 keeping track of the user's context,
-asking for permission before sending notifications and
-consciously ordering buttons,
+asking for permission before sending notifications,
+consciously ordering buttons and
+allowing custom user feedback,
 these patterns can be applied in many different scenarios.
-
-% TODO
-% Information about secondary interactions can be found on \pageref{fig:secondary} in the appendix.
-

@@ -9,7 +9,7 @@ which are not unique to this specific chatbot and thereby enable others to apply
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{images/internal-deps.png}
-  \caption{Package dependency graph\footnotemark}
+  \caption{Package dependency graph\protect\footnotemark}
 	\label{fig:internal-deps}
 \end{figure}
 \footnotetext{The graph has been created with \emph{godepgraph}\cite{godepgraph}}
@@ -49,7 +49,7 @@ specifically designed to be used in this chatbot, it only needs to support data 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{images/call-graph-messenger.png}
-	\caption{Call Graph of the messenger package\footnotemark}
+	\caption{Call Graph of the messenger package\protect\footnotemark}
 	\label{fig:call-graph-messenger}
 \end{figure}
 \footnotetext{The visualization has been created with \emph{go-callvis}\cite{gocallvis}}
@@ -94,7 +94,8 @@ since package \textbf{messenger} is the only package responsible for communicati
 
 Limiting logic specific to the chosen platform, in this case Facebook Messenger,
 makes it easier to adopt the chatbot to new platforms in the future.
+\\
 
+Call graphs for the packages \textbf{main}, \textbf{admin} and \textbf{fbot} can be found on in the appendix starting on page \pageref{a:call-graph},
 % TODO
-% Call graphs for the other packages can be found on \pageref{} in the appendix,
 % and to further understand the generated documentation for all packages on \pageref{} can be consulted.
