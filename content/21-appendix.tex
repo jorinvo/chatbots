@@ -11,7 +11,7 @@
 \end{figure}
 
 
-\section{Call Graphs}
+\chapter{Call Graphs}
 
 \begin{figure}[H]
   \centering
@@ -32,22 +32,31 @@
 	\caption{Call Graph of package fbot}
 \end{figure}
 
-\section{Documentation}
+\chapter{Documentation}
 \label{a:docs}
+
+\lstset{
+	extendedchars=true,
+	numbers=left,
+	numberstyle=\tiny,
+	breakautoindent  = true,
+	breakindent      = 2em,
+	breaklines       = true,
+}
 
 \begin{lstlisting}[
   caption={Command line interface usage information},
   basicstyle=\scriptsize\ttfamily
 ]
-Slangebrain Messenger bot
+Studybot
 
 Usage: chatbot [flags]
 
-Slangbrain uses BoltDB as a database.
+Studybot uses BoltDB as a database.
 Data is stored in a single file. No external system is needed.
 However, only one application can access the database at a time.
 
-Slangbrain starts a server to serve a webhook handler that can be registered as a Messenger bot.
+Studybot starts a server to serve a webhook handler that can be registered as a Messenger bot.
 The server is HTTP only and a proxy server should be used to make the bot available on
 a public domain, preferably HTTPS only.
 
@@ -75,46 +84,6 @@ Flags:
     	Required. Messenger bot token.
   -verify string
     	Required. Messenger bot verify token.
-\end{lstlisting}
-
-
-\pagebreak
-\begin{lstlisting}[
-  caption={Directory listing},
-  basicstyle=\small\ttfamily
-]
-/Users/jorin/go/src/github.com/jorinvo/chatbot
-├── admin
-│   └── admin.go
-├── brain
-│   ├── brain.go
-│   ├── mode.go
-│   ├── phrase.go
-│   ├── store.go
-│   ├── study.go
-│   ├── subscription.go
-│   └── util.go
-├── call-graph-admin.png
-├── call-graph-brain.png
-├── call-graph-fbot.png
-├── call-graph-main.png
-├── call-graph-messenger.png
-├── fbot
-│   ├── fbot.go
-│   ├── profile.go
-│   ├── response.go
-│   ├── settings.go
-│   └── webhook.go
-├── main.go
-└── messenger
-    ├── bot.go
-    ├── buttons.go
-    ├── messages.go
-    ├── messenger.go
-    ├── notify.go
-    └── payloads.go
-
-4 directories, 25 files
 \end{lstlisting}
 
 
