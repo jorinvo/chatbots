@@ -1,5 +1,6 @@
 \section{Setup and Requirements}
 
+
 After knowing the features the chatbot should support,
 technical requirements can be extracted
 and appropriate technology can be chosen for the implementation.
@@ -12,19 +13,19 @@ there are two fundamental ways for communicating with a user,
 interface elements and natural language.
 \\
 
-Since the previous defined features for the minimal viable product of the example chatbot are so basic,
-there are not many options required and everything can be represented in an unambitious interface.
+Since the previous defined features for the minimal viable product of the example chatbot require not many options,
+everything can be represented in an unambitious interface.
 \\
 
-The precise actions necessary to be defined are shown in the next section.
+The concrete actions necessary shown in the next section.
 For now it should be sufficient to know that all of them can be represented as predefined actions.
 \\
 However guiding the user with interface elements instead of natural language
 does not imply that natural language can not be used complimentary.
 \\
 Quite the contrary, the example chatbot is only possible by analyzing user input;
-when adding new vocabulary phrases and their explanations need to be captured,
-and likewise the user's guess needs to be evaluated when studying.
+when adding new vocabulary, phrases and their explanations need to be captured,
+and likewise the user's guesses need to be evaluated when studying.
 \\
 
 The implementation of this chatbot demonstrates the complementing use of interface elements and natural language side by side.
@@ -44,7 +45,7 @@ As shown in \ref{platforms} on page \pageref{platforms} there are many possible 
 and some are fundamentally different.
 \\
 
-Deciding for a voice-based platform like Alexa, or for SMS or a messenger platform has consequences
+Deciding for a voice-based platform like \emph{Alexa}, for \emph{SMS} or for a messenger platform has consequences
 for all other decisions.
 \\
 For the case of the example chatbot, while possible, a voice-based interface is rather unsuitable since
@@ -53,64 +54,67 @@ and further, there is currently no voice-based platform available
 that supports multiple languages simultaneously.
 \\
 
-SMS communication is better suited for scenarios that only need to send a low number of messages,
+\emph{SMS} communication is better suited for scenarios that only need to send a low number of messages,
 since, although the prices are pretty low, there are costs for sending text messages.
 \\
-As of writing, Twilio charges \$0.0075 for receiving and \$0.085 for sending per message when using their Global Short Message Service API in Germany\cite{twilio}.
+As of writing, \emph{Twilio} charges \$0,0075 for receiving and \$0,085 for sending per message when using their \emph{Global Short Message Service API} in Germany\cite{twilio}.
 \\
 Supposed the chatbot has 1000 active users that all study 100 phrases daily,
-the costs would accumulate to \$277500 of monthly expenses\footnote{$1000\times100\times30\times(0.085+0.0075)=277500$}.
-These prices are affordable if a company is selling airplane and send tickets directly to users' phones,
-but in other scenarios another messaging platform is more suited.
+the costs would accumulate to \$277.500 of monthly expenses\footnote{$1000\times100\times30\times(0,085+0,0075)=277.500$}.
+These prices are affordable if a company is selling airplane tickets or something similar,
+but in other scenarios another messaging platform is better suited.
 \\
 
 By choosing a messaging application as target platform, there are no monthly costs to be taken care of.
 Additionally there are further interface elements for interaction available than only plain text.
-But there are many major existing messaging applications and the choice can be difficult.
-As we saw earlier, different platforms have geographically different target markets.
-If a chatbot targets the Chinese Market WeChat would be the obvious platform to choose;
-likewise Japan would be targeted by using Line.
+But there are many major existing messaging applications and deciding for one can be difficult.
 \\
-In North America and Europe Facebook Messenger and Facebook's WhatsApp are currently the leading platforms.
-Since as of writing WhatsApp does not provide a publicly available API, Facebook Messenger is the biggest platform one can target.
+As shown in \ref{geography} on page \pageref{geography}, different platforms have geographically different target markets.
+If a chatbot targets the Chinese market \emph{WeChat} would be the obvious platform to choose;
+likewise Japan would be targeted by using\emph{ Line}.
+\\
+In North America and Europe \emph{Facebook Messenger} and \emph{Facebook's WhatsApp} are currently the leading platforms.
+Since as of writing \emph{WhatsApp} does not provide publicly available access to the platform,
+\emph{Facebook Messenger} is the biggest platform one can currently target.
 \\
 By creating the first version of the example chatbot with English as an interface language,
-the target markets are mainly North America, Europe and Australia and therefore Facebook Messenger would be a natural fit as target platform.
+the target markets are primarily North America, Europe and Australia and therefore \emph{Facebook Messenger} would be a natural fit as target platform.
 \\
 
-As mentioned in \ref{crossplatform} on page \pageref{crossplatform}, there are also solutions to create chatbots using a framework which allows to release the chatbot to multiple platforms at the same time, but as previously noted such a framework also has drawbacks.
+As mentioned in \ref{crossplatform} on page \pageref{crossplatform},
+there are also solutions to create chatbots using a framework that allows to release the chatbot to multiple platforms at the same time,
+but as previously noted such a framework also has drawbacks.
 \\
 With the limitations in mind and to keep the example as simple as possible,
 it will be implemented for a single platform without abstracting the process by using third-party frameworks.
 \\
 
-Facebook Messenger is a fitting platform not only due to popularity,
+\emph{Facebook Messenger} is a fitting platform not only due to popularity,
 but also because it offers mechanisms for interacting with chatbots via interface elements,
 which will be used in the next chapter to display action buttons in the user interface.
 \\
 
-The registration and configuration of a chatbot for Facebook Messenger is not explained in detail here,
-since the Facebook's own online documentation already covers detailed explanations
+The registration and configuration of a chatbot for \emph{Facebook Messenger} is not explained in detail here,
+since Facebook's online documentation already covers detailed explanations
 and the majority of the settings are specific to each chatbot.
 \\
-It should be noted that Facebook refers to a chatbot in Messenger simply as \emph{bot},
-and to create a Messenger bot it is required to first create a \emph{Facebook Page} and an \emph{application} for the page.
+It should be noted that Facebook refers to a chatbot in \emph{Messenger} simply as \emph{bot},
+and to create a \emph{Messenger bot} it is required to first create a \emph{Facebook Page} and an \emph{application} for the page.
 Afterwards \emph{Messenger} can be added as a \emph{product} to the application.
 \\
-Further information can be found in the developer documentation at https://developers.facebook.com/products/messenger.
-How authentication works is explained in \ref{implementation} on page \pageref{implementation}.
-
+Further information can be found in the developer documentation.\footnote{https://developers.facebook.com/products/messenger}
 
 \subsubsection{Integration}
 
-The development of a chatbot for Facebook Messenger is similar to most other platforms.
+The development of a chatbot for \emph{Facebook Messenger} is similar to most other platforms.
 \\
-When creating and configurating a chatbot, the developer registers a webhook URL.
+When creating and configuring a chatbot, the developer registers a \emph{WebHook}.
 ``The concept of a WebHook is simple. A WebHook is an HTTP callback: an HTTP POST that occurs when something happens; a simple event-notification via HTTP POST.''\cite{webhook}
 \\
 After the setup is done,
-Facebook will now send an HTTP POST request to the registered URL containing event information for every message a user sends to the chatbot.
-This way the developer has complete control over how to handle each message on any machine that is reachable via a public URL.
+Facebook will now send an \emph{HTTP POST} request to the registered URL containing event information for every message a user sends to the chatbot.
+\\
+This way the developer has complete control over how to handle each message on an arbitrary machine that is reachable via a public URL.
 
 
 \subsection{Server}
@@ -121,8 +125,9 @@ and it has to be decided to structure the application running on this server.
 
 \subsubsection{Programming Language}
 
-Since all interaction with the chatbot platform happens via HTTP,
-there is no restriction on which programming language to use as long as it can be executed through a web server.
+Since all interaction with the platform happens via HTTP,
+there is no restriction on which programming language to use as long as it can be accessed through HTTP.
+\\
 Chatbots can be written in any programming language.
 \\
 Depending on the specific application, different programming languages are better suited than others though.
@@ -136,21 +141,22 @@ The timers need to be lightweight enough to be re-scheduled for every user activ
 that can affect the time the notification is scheduled for.
 \\
 Single-threaded programming languages, such as Python, Ruby or PHP,
-mostly use the pattern of using a separate worker process to handle scheduled jobs,
+mostly separate worker processes to handle scheduled jobs,
 but in this case there would need to be another process for each user
 just waiting until it is time to send notifications to the specific user.
 \\
 Another way to handle this in single-threaded programming languages is by using a system for \emph{asynchronous, evented I/O},
-such as the \emph{asyncio} module for Python\cite{asyncio} or the Node.js JavaScript runtime\cite{nodejs}.
+such as the \emph{asyncio} module for \emph{Python}\cite{asyncio} or the \emph{Node.js} JavaScript runtime\cite{nodejs}.
 \\
 
-The example chatbot is created with the Go programming language\cite{golang}.
+The example chatbot is created with the \emph{Go} programming language\cite{golang}.
 \\
 Go is a multi-threaded language which allows for taking advantage of all available CPUs
 on a machine without the overhead of creating new processes.
 \\
-It is well suited for scheduling notifications and further, Go has a robust web server in the standard library which can be exposed to the public Internet without a proxy server, that is common with the previous mentioned programming languages.
-By making use of this there is less parts to take care of and the example can be a simple and self-contained application.
+It is well suited for scheduling notifications and further, Go has a robust web server in the \emph{standard library} which can be exposed to the public Internet without a proxy server, which is a common approach with the previous mentioned programming languages.
+\\
+With this setup there are less moving parts to take care of and the example can be a simple and self-contained application.
 \\
 
 
@@ -159,34 +165,32 @@ By making use of this there is less parts to take care of and the example can be
 Some applications do not store any data locally, but only process requests and send out replies.
 \\
 In the example case data needs to be stored and it should be stored locally on the same machine
-to keep the application as contained and simple as possible.
+to keep the application simple.
 \\
 
 Since a user can save new vocabulary,
 there needs to be a way to store information for each user.
 \\
 For the studying itself, further information has to be stored.
-It is necessary to keep track of correct and incorrect guesses the user does while studying
-and to decide when to study next, the time of the last study needs to be tracked too.
+It is necessary to keep track of correct and incorrect guesses the user does while studying, it needs to be decided when to study next and the time of the last study needs to be tracked too.
 \\
 
 To send notification additional information has to be stored.
+\\
 It is necessary to know when the user was last active and if the user saw the last notification,
 since notifications should only be send when the user is not already active at this moment
-and when the user has not seen the last notification yet, no new one has to be sent either.
+and when the user has already seen the last notification.
 \\
 
-All of the information required to be stored is always focused on a user.
+All of the required information is always focused on a single user.
 Users can never share information with each other.
-There are no complex relations between data.
+There are no complex relations in the data.
 \\
-Without relational data there is not much use of features that relational databases such as MySQL or PostgreSQL provide;
-a simple key-value store can be sufficient for storing this data instead.
+Without relational data there is not much use of features that relational databases such as \emph{MySQL} or \emph{PostgreSQL} provide;
+instead a simple key-value store can be sufficient for storing the data.
 \\
-The example uses an embedded key-value store called BoltDB\cite{boltdb}.
+The example uses an embedded key-value store called \emph{BoltDB}\cite{boltdb}, which does not need a separate process and it saves data on disk in a single file.
 \\
-No separate process is needed for the database and data is saved on disk in a single file.
-
 
 
 These technical decisions are the base for the following description of the chatbot implementation.
