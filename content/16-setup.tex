@@ -57,7 +57,7 @@ that supports multiple languages simultaneously.
 \emph{SMS} communication is better suited for scenarios that only need to send a low number of messages,
 since, although the prices are pretty low, there are costs for sending text messages.
 \\
-As of writing, \emph{Twilio} charges \$0,0075 for receiving and \$0,085 for sending per message when using their \emph{Global Short Message Service API} in Germany\cite{twilio}.
+As of writing, \emph{Twilio} charges \$0,0075 for receiving and \$0,085 for sending per message when using their \emph{Global Short Message Service API} in Germany~\cite{twilio}.
 \\
 Supposed the chatbot has 1000 active users that all study 100 phrases daily,
 the costs would accumulate to \$277.500 of monthly expenses\footnote{$1000\times100\times30\times(0,085+0,0075)=277.500$}.
@@ -109,7 +109,7 @@ Further information can be found in the developer documentation.\footnote{https:
 The development of a chatbot for \emph{Facebook Messenger} is similar to most other platforms.
 \\
 When creating and configuring a chatbot, the developer registers a \emph{WebHook}.
-``The concept of a WebHook is simple. A WebHook is an HTTP callback: an HTTP POST that occurs when something happens; a simple event-notification via HTTP POST.''\cite{webhook}
+``The concept of a WebHook is simple. A WebHook is an HTTP callback: an HTTP POST that occurs when something happens; a simple event-notification via HTTP POST''~\cite{webhook}.
 \\
 After the setup is done,
 Facebook will now send an \emph{HTTP POST} request to the registered URL containing event information for every message a user sends to the chatbot.
@@ -146,10 +146,10 @@ but in this case there would need to be another process for each user
 just waiting until it is time to send notifications to the specific user.
 \\
 Another way to handle this in single-threaded programming languages is by using a system for \emph{asynchronous, evented I/O},
-such as the \emph{asyncio} module for \emph{Python}\cite{asyncio} or the \emph{Node.js} JavaScript runtime\cite{nodejs}.
+such as the \emph{asyncio} module for \emph{Python}~\cite{asyncio} or the \emph{Node.js} JavaScript runtime~\cite{nodejs}.
 \\
 
-The example chatbot is created with the \emph{Go} programming language\cite{golang}.
+The example chatbot is created with the \emph{Go} programming language~\cite{golang}.
 \\
 Go is a multi-threaded language which allows for taking advantage of all available CPUs
 on a machine without the overhead of creating new processes.
@@ -189,7 +189,7 @@ There are no complex relations in the data.
 Without relational data there is not much use of features that relational databases such as \emph{MySQL} or \emph{PostgreSQL} provide;
 instead a simple key-value store can be sufficient for storing the data.
 \\
-The example uses an embedded key-value store called \emph{BoltDB}\cite{boltdb}, which does not need a separate process and it saves data on disk in a single file.
+The example uses an embedded key-value store called \emph{BoltDB}~\cite{boltdb}, which does not need a separate process and it saves data on disk in a single file.
 \\
 
 
