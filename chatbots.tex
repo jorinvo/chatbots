@@ -35,6 +35,8 @@
 \usepackage{tabularx} % Für Tabellen mit vorgegeben Größen
 \usepackage{longtable} % Tabellen über mehrere Seiten
 \usepackage{array}
+% Appendix
+\usepackage[titletoc,title]{appendix}
 %  Bibliographie
 % Sort by order of appearance in document
 \usepackage[sorting=none]{biblatex}
@@ -110,7 +112,7 @@ July 29, 2017
 
 \clearpage
 
-% TODO: think about adding an abstract and a licensing notice
+\input{content/00-abstract.tex}
 
 
 \tableofcontents
@@ -139,7 +141,9 @@ July 29, 2017
 \input{content/18-server.tex}
 \input{content/19-limitations.tex}
 \input{content/20-conclusion.tex}
+\begin{appendices}
 \input{content/21-appendix.tex}
+\end{appendices}
 
 
 \printbibliography[heading=bibintoc]
