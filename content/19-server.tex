@@ -98,4 +98,23 @@ makes it easier to adopt the chatbot to new platforms in the future.
 
 Call graphs for the packages \textbf{main}, \textbf{admin} and \textbf{fbot} can be found in the appendix starting on page \pageref{a:call-graph}.
 Additionally the Go documentation for all exported types and functions can be found on page \pageref{a:docs}.
-It explains the actual implementaion in more detail.
+It explains the actual implementation in more detail.
+\\
+
+
+The exemplary development of a chatbot can be summarized as being a slight variation of already known server-side development.
+\\
+Chatbot software is fundamentally a server accepting \emph{HTTP requests} from a messenger platforms and sending \emph{HTTP requests} back to the messenger platform.
+\\
+Developing such a system should feel familiar to all developers which have in the past created web applications with server-side rendering,
+since state management and request processing work in the same manner.
+\\
+While the receiving of user events can be approached with known patterns, the sending of replies back to users requires a paradigm shift in thinking.
+\\
+Technically responses are also rendered and sent to users,
+but the rendering has no custom underlying interface as it is the case when rendering \emph{HTML} for web pages.
+Instead, primarily plain text and only few platform-specific interface elements are available for expressing content.
+\\
+
+Apart from potential use of complex natural language technology,
+the main difficulty of chatbot development is the design of user interfaces for chat as a medium.
