@@ -87,3 +87,39 @@ For demonstration purposes it is desired to keep the product as simple as possib
 \\
 The knowledge that can be taken from making decisions about the implementation and walking through the process of creating the chatbot,
 is mostly independent from this particular product and can be applied to the development of other chatbot products.
+
+
+\subsection{Non-functional Requirements}
+
+Since this is an example application, non-functional requirements remain minimal.
+\\
+
+\emph{Availability} of the service is not a priority, but chatbot software can be scaled similar to other software and redundancy can be used to ensure availability.
+\\
+Since messaging platforms are an intermediary between users and the chatbot software, most platforms also re-send missed messages in case the chatbot is unavailable, which further lessens the priority of availability.
+\\
+
+Similarly, \emph{security} is not a main focus here since the dependence on a messaging platform ensures certain factors such as the authentication and encryption of communication.
+\\
+
+\emph{Performance} is equally not a major concern at this point.
+\\
+Since the scope of the example application is limited and the functionality simple,
+the domain specific logic is not expensive in computation.
+\\
+The main performance bottleneck is the in \ref{limitations} on page \pageref{limitations} mentioned aspect of networking and involved unknown parties.
+\\
+Employing performance-improving solutions for networking issues won't be a part of the example chatbot,
+but in performance can be improved by choosing geographically strategic located data centers for deploying the chatbot software.
+\\
+
+A more central requirement is \emph{reusability}.
+Although the example is a chatbot solving a specific task,
+the software architecture should be designed in a way,
+that appropriate parts can be reused by others.
+\\
+To ensure reusability the software should \emph{documented}, \emph{stable} and \emph{extensible}.
+
+\emph{Usability} can be seen as the most important non-functional requirement.
+\\
+The focus of development is in designing a good user experience and exploring how interface and interaction design is done for this medium.
