@@ -4,7 +4,7 @@
 The following is an overview about how \emph{Studybot} has been created.
 \\
 Instead of covering all details, the focus here is to communicate the underlying concepts,
-which are not unique to this specific chatbot and thereby enable others to apply similar patterns in their own development.
+which are not unique to this specific chatbot and thereby enable others to apply these patterns in their own development.
 \\
 
 \begin{figure}[h]
@@ -38,13 +38,17 @@ one of its main responsibilities is to handle communication with \emph{Slack}
 for the in \ref{slackhook} on page \pageref{slackhook} mentioned \emph{feedback} feature.
 \\
 
-Package \textbf{messenger} is responsible for processing all events received from the \emph{Facebook Messenger platform}.
+Package \textbf{messenger} is responsible for processing all events received from the \emph{Facebook Messenger platform}
+and sending replies back to users.
 \\
 
 It relies on another package named \textbf{fbot},
-which is a simple abstraction over the used functionality of the \emph{Facebook Messenger platform}.
-Communication in this package happens via \emph{JSON over HTTP} and since this is a custom package,
-it is specifically designed to be used in this chatbot, and it only needs to support data types and parameters that are actually relevant for this chatbot.
+which is a simple abstraction over functionality of the \emph{Facebook Messenger platform}.
+Communication in this package happens via \emph{JSON over HTTP}.
+\\
+Since this is a custom package,
+it is specifically designed to be used in this chatbot.
+It only needs to support data types and parameters that are relevant to this chatbot.
 \\
 
 \begin{figure}[h]
@@ -56,7 +60,7 @@ it is specifically designed to be used in this chatbot, and it only needs to sup
 \footnotetext{The visualization has been created with \emph{go-callvis}~\cite{gocallvis}}
 
 
-Most of the code-base and its architecture are structure the same way most other \emph{servers} are organized;
+Most of the code base and its architecture are structure the same way most other \emph{servers} are organized;
 the logic specific to the development of the chatbot is contained in the package \textbf{messenger}.
 \\
 Figure \ref{fig:call-graph-messenger} illustrates the behavior of this package.
@@ -71,50 +75,52 @@ and to send generated responses back to users.
 \\
 The function \emph{HandleEvent}, which can be seen in figure \ref{fig:call-graph-messenger},
 is called by package \textbf{fbot} with every event the WebHook receives,
-and this is the main entry-point into the chatbot logic.
-Depending on the type of the event,
-\emph{HandleEvent} can track whenever a user read a message,
-or it can send a message back to the user,
-whereby it has to be differentiate between handling text messages
-or handling the use of predefined buttons.
+and it is the main entry-point to the chatbot logic.
+\\
+Depending on the type of event,
+\emph{HandleEvent} tracks whenever a user reads a message,
+or it sends a message back to the user,
+whereby it needs to be differentiated between handling text messages
+or predefined buttons.
 \\
 
 In addition to directly responding to users,
 \emph{HandleEvent} is also the trigger for scheduling notifications.
-With every action of a user, the next time they receive a notification needs to be rescheduled,
+\\
+With every action of users, the next time they receive a notification needs to be rescheduled,
 which happens in the call to the internal function \emph{scheduleNotify}.
-The function in \ref{fig:call-graph-messenger} labeled as \emph{scheduleNotify\$1} is an anonymous callback function,
+The function in \ref{fig:call-graph-messenger} labeled as \emph{scheduleNotify\$1} is an \emph{anonymous callback function},
 one for each user, that is called by the scheduled timer to send a message to a user.
 \\
 
 Further, it is visible in \ref{fig:call-graph-messenger},
 that package \textbf{admin} can call a function named \emph{SendMessage} which belongs to the \emph{Bot} type.
-This is used to send replies from \emph{Slack}, back to users.
+This is used to send replies from \emph{Slack} back to users.
 \\
 
-Limiting logic specific to the chosen platform, in this case \emph{Facebook Messenger},
+Separating and containing logic specific to the chosen platform, in this case \emph{Facebook Messenger},
 makes it easier to adopt the chatbot to new platforms in the future.
 \\
 
 Call graphs for the packages \textbf{main}, \textbf{admin} and \textbf{fbot} can be found in the appendix starting on page \pageref{a:call-graph}.
 Additionally the Go documentation for all exported types and functions can be found on page \pageref{a:docs}.
-It explains the actual implementation in more detail.
+It explains specific implementations in more detail.
 \\
 
 
-The exemplary development of a chatbot can be summarized as being a slight variation of already known server-side development.
+The development of a chatbot can be summarized as being a slight variation of already known server-side development.
 \\
-Chatbot software is fundamentally a server accepting \emph{HTTP requests} from a messenger platforms and sending \emph{HTTP requests} back to the messenger platform.
+Chatbot software is fundamentally a server accepting \emph{HTTP requests} from a messenger platforms and sending \emph{HTTP responses} back to the messenger platform.
 \\
-Developing such a system should feel familiar to all developers which have in the past created web applications with server-side rendering,
+Developing such a system should feel familiar to all developers that have in the past created web applications with server-side rendering,
 since state management and request processing work in the same manner.
 \\
 While the receiving of user events can be approached with known patterns, the sending of replies back to users requires a paradigm shift in thinking.
 \\
 Technically responses are also rendered and sent to users,
 but the rendering has no custom underlying interface as it is the case when rendering \emph{HTML} for web pages.
-Instead, primarily plain text and only few platform-specific interface elements are available for expressing content.
+Instead, primarily plain text and only few platform-specific interface elements are available for presenting content.
 \\
 
 Apart from potential use of complex natural language technology,
-the main difficulty of chatbot development is the design of user interfaces for chat as a medium.
+the main difficulty of chatbot development is the design of user interfaces for the medium \emph{chat}.

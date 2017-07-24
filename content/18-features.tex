@@ -50,7 +50,7 @@ the category the \emph{Facebook Page} is part of,
 and a text describing the functionality of the chatbot,
 whereby all of these elements can be defined by the developer of the chatbot.
 \\
-A button labeled \textbf{Get Started} is displayed at the bottom of the view.
+A button labeled \textbf{Get Started} is displayed at the bottom of the screen.
 \\
 
 \begin{figure}[h]
@@ -85,7 +85,7 @@ It can be seen in the image on the right of figure \ref{fig:03-welcome} that a s
 \\
 The second message is delivered 5 seconds later than the first one to not overwhelm the users with too much information at once.
 \\
-This message contains instructions to get started using the application.
+This message contains instructions to begin using the application.
 \\
 The instructions are additionally illustrated by providing an example for a message in the expected format.
 \\
@@ -129,8 +129,8 @@ As shown in figure \ref{fig:04-add}, three phrases have been added to \emph{Stud
 before the user decides to press the button labeled as \textbf{stop adding}.
 \\
 Figure \ref{fig:05-stop-adding} shows, that after stopping the adding of phrases, the user is prompted with an array of four possible actions.
-The actions are labeled as \textbf{study}, \textbf{+ phrases}, \textbf{help} and \textbf{done} respectively.
-Each button label also contains an emoji\footnote{``Emoji are pictographs (pictorial symbols) that are typically presented in a colorful form and used inline in text. They represent things such as faces, weather, vehicles and buildings, food and drink, animals and plants, or icons that represent emotions, feelings, or activities.''~\cite{emoji}} used as icon for the action to make it easier identifiable for the user.
+The actions are labeled as \textbf{study}, \textbf{+ phrases}, \textbf{help} and \textbf{done}.
+Each button label also contains an emoji\footnote{``Emoji are pictographs (pictorial symbols) that are typically presented in a colorful form and used inline in text. They represent things such as faces, weather, vehicles and buildings, food and drink, animals and plants, or icons that represent emotions, feelings, or activities.''~\cite{emoji}} used as icon for the action to make it easier identifiable for users.
 \\
 When the usage of graphical elements is limited and one has to rely mainly on text for communication,
 emojis can be a helpful substitution for traditional icons to provide visual guidance.
@@ -142,7 +142,7 @@ Internally the chatbot needs to keep track of the current \emph{mode} of each us
 to address each message in the correct context.
 \\
 In figure \ref{fig:05-stop-adding} the user has left the \emph{mode} for adding words
-and entered the \emph{menu mode} which gives access to other modes.
+and entered the \emph{menu mode} which provides access to other modes.
 \\
 
 \begin{figure}[h]
@@ -173,8 +173,8 @@ The more often a phrase is guessed correctly the less frequent the user will be 
 	\label{fig:07-notify-study}
 \end{figure}
 
-Instead of studying the previously added phrases directly,
-the user is offered to receive a notification message once phrases are ready for review.
+Since added phrases can not be studied directly,
+the user is instead offered to receive a notification message once phrases are ready for review.
 \\
 
 When sending notifications to users, it is crucial to not send more messages than necessary.
@@ -217,15 +217,15 @@ creating separate functionality for editing and deleting phrases is difficult to
 and during studying is the only possible moment to refer to a phrase.
 \\
 
-The figures \ref{fig:07-notify-study} and \ref{fig:08-study-done} show a subtle decision to display the buttons users are most likely to interact with,
+The figures \ref{fig:07-notify-study} and \ref{fig:08-study-done} show a subtle decision to display the buttons users are most likely to interact with
 on the right side.
 \\
 Since the English language is written from left to right and we scan text accordingly,
-it is mostly more intuitive to show the most important information on the left,
+it is more intuitive to show the most important information on the left,
 however certain interactions, like studying, need to be performed so frequently,
-that a user will remember the location of the buttons quickly and does not need to \emph{scan} process the information every single time.
+that a user will remember the location of the buttons quickly and does not need to \emph{scan} the interface every single time.
 \\
-In these scenarios it is helpful to have the most used action on the right side, because the majority of humans is right-handed,
+In this scenario it is helpful to have the most used action on the right side, because the majority of humans are right-handed \cite{righthand},
 and they can therefore reach the buttons on the right with less effort since they are closer to the thumb when using a mobile phone single-handed.
 \\
 
@@ -244,14 +244,14 @@ As shown in figure \ref{fig:09-feedback}, it can be accessed after pressing the 
 \\
 This feature is not specific to language studying and it is useful for most chatbots.
 \\
-Normally all messages are answered automated by the chatbot,
+Normally all messages are answered automatically by the chatbot,
 but there should be a way for users to talk to the human developers or administrators that provide the chatbot.
 \\
-The feature is automated by sending the messages users send as \emph{feedback}
+The feature is automated by sending the messages that users send as \emph{feedback}
 to a \emph{Slack channel}~\cite{slack}.
 \\
 Additionally administrators can directly reply to user messages inside \emph{Slack}
-and the messages is forwarded to the correct user within the chatbot.
+and the replies are send back to the correct users within the chatbot.
 \\
 Figure \ref{fig:09-feedback} shows the flow for sending feedback from a user's point of view.
 \\
@@ -263,18 +263,18 @@ can minimize the manual work required to maintain a personal feature like this.
 
 All primary interactions the example chatbot provides have been covered above.
 \\
-Many of the implemented interactions can be transfered and reused when creating other kinds of chatbot;
-addressing the user by name,
+Many of the implemented interactions can be transfered and reused when creating other kinds of chatbots;
+addressing users by name,
 sending text in small chunks with a delay in between,
 prompting users for specific input with every message,
 keeping track of the context of each user,
 asking for permission before sending notifications,
 consciously ordering buttons and
-allowing custom user feedback,
+supporting custom user feedback,
 these patterns can be applied in many different scenarios.
 \\
 
-The resulting functionality and implementation of the example chatbot can be summarized as finding the simplest possible interactions for the user to get tasks done, which is expressed well in the following quote from the newspaper \emph{The Guardian}~\cite{digiday} about the lessons they learned by developing a chatbot:
+The resulting functionality and implementation of the example chatbot can be summarized as finding the simplest possible interaction for the user to get a task done, which is expressed well in the following quote from the newspaper \emph{The Guardian}~\cite{digiday} about the lessons they learned by developing a chatbot:
 
 \begin{quote}
 A lot of users responded as they would to a human, and when they got non-human responses, they’d stop using it, said Wilk. So the Guardian went in the opposite direction with its news bot and aimed for utter simplicity. The lesson, according to Wilk, was: “Don’t build people’s expectations too much of what’s possible, just keep it simple.”
