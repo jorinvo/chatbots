@@ -46,9 +46,9 @@
   caption={Command line interface usage information},
   basicstyle=\scriptsize\ttfamily
 ]
-Studybot
+Studybot - Facebook Messenger bot
 
-Usage: chatbot [flags]
+Usage: studybot [flags]
 
 Studybot uses BoltDB as a database.
 Data is stored in a single file. No external system is needed.
@@ -91,7 +91,7 @@ Flags:
   basicstyle=\scriptsize\ttfamily
 ]
 package messenger
-    import "github.com/jorinvo/chatbot/messenger"
+    import "github.com/jorinvo/studybot/messenger"
 
     Package messenger implements the Messenger bot and handles all the user
     interaction.
@@ -150,7 +150,7 @@ type Feedback struct {
   basicstyle=\footnotesize\ttfamily
 ]
 package admin
-    import "github.com/jorinvo/chatbot/admin"
+    import "github.com/jorinvo/studybot/admin"
 
     Package admin provides an admin server that can be used to make backups
     and to communicate with users via Slack.
@@ -190,7 +190,7 @@ func (a Admin) ServeHTTP(w http.ResponseWriter, r *http.Request)
   basicstyle=\scriptsize\ttfamily
 ]
 package fbot
-    import "github.com/jorinvo/chatbot/fbot"
+    import "github.com/jorinvo/studybot/fbot"
 
     Package fbot can be used to communicate with a Facebook Messenger bot.
     The supported API is limited to only the required use cases and the data
@@ -288,7 +288,7 @@ type Profile struct {
   basicstyle=\scriptsize\ttfamily
 ]
 package brain
-    import "github.com/jorinvo/chatbot/brain"
+    import "github.com/jorinvo/studybot/brain"
 
     Package brain handles all business logic of Slangbrain. It handles data
     storage, retrieving and updating. It's independent from the used bot

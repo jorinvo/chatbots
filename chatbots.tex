@@ -1,66 +1,41 @@
-% \documentclass[12pt, openright]{report}
 \documentclass[12pt, headinclude, parskip=half+, numbers=noenddot, openright]{scrreprt}
-% PDF-Kompression
 \pdfminorversion=5
 \pdfobjcompresslevel=1
-% Allgemeines
-\usepackage[automark]{scrpage2} % Kopf- und Fußzeilen
-% \usepackage{amsmath,marvosym} % Mathesachen
-\usepackage[T1]{fontenc} % Ligaturen, richtige Umlaute im PDF
-\usepackage[utf8]{inputenc}% UTF8-Kodierung für Umlaute usw
-% Schriften
-\usepackage{setspace} % Zeilenabstand
+\usepackage[automark]{scrpage2}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
 \usepackage{titlesec}
-\onehalfspacing % 1,5 Zeilen
-% Schriften-Größen
-\setkomafont{chapter}{\Large\rmfamily} % Überschrift der Ebene
+\onehalfspacing
+\setkomafont{chapter}{\Large\rmfamily}
 \setkomafont{section}{\large\rmfamily}
 \setkomafont{subsection}{\large\rmfamily}
 \setkomafont{subsubsection}{\normalsize\rmfamily}
-\setkomafont{chapterentry}{\large\rmfamily} % Überschrift der Ebene in Inhaltsverzeichnis
-\setkomafont{descriptionlabel}{\bfseries\rmfamily} % für description Umgebungen
+\setkomafont{chapterentry}{\large\rmfamily}
+\setkomafont{descriptionlabel}{\bfseries\rmfamily}
 \setkomafont{captionlabel}{\small\bfseries}
 \setkomafont{caption}{\small}
-% Language: English
 \usepackage[english]{babel}
-% PDF
-\usepackage[final]{microtype} % mikrotypographische Optimierungen
+\usepackage[final]{microtype}
 \usepackage{float}
-\usepackage{url} % ermögliche Links (URLs)
-\usepackage{pdflscape} % einzelne Seiten drehen können
+\usepackage{url}
+\usepackage{pdflscape}
 \usepackage{hyperref}
-% Tabellen
-\usepackage{multirow} % Tabellen-Zellen über mehrere Zeilen
-\usepackage{multicol} % mehre Spalten auf eine Seite
-\usepackage{tabularx} % Für Tabellen mit vorgegeben Größen
-\usepackage{longtable} % Tabellen über mehrere Seiten
-\usepackage{array}
-% Appendix
 \usepackage[titletoc,title]{appendix}
-%  Bibliographie
-% Sort by order of appearance in document
 \usepackage[sorting=none]{biblatex}
-% Bilder
-\usepackage{graphicx} % Bilder
-\usepackage{color} % Farben
+\usepackage{graphicx}
+\usepackage{color}
 \usepackage{wrapfig}
-\usepackage[all]{hypcap} % Beim Klicken auf Links zum Bild und nicht zu Caption gehen
-% Bildunterschrift
-\setcapindent{0em} % kein Einrücken der Caption von Figures und Tabellen
-\setcapwidth{0.9\textwidth} % Breite der Caption nur 90% der Textbreite, damit sie sich vom restlichen Text abhebt
+\usepackage[all]{hypcap}
+\setcapindent{0em}
+\setcapwidth{0.9\textwidth}
 \setlength{\parskip}{0pt}
-\setlength{\abovecaptionskip}{0.2cm} % Abstand der zwischen Bild- und Bildunterschrift
-% Quellcode
-% für Formatierung in Quelltexten, hier im Anhang
+\setlength{\abovecaptionskip}{0.2cm}
 \usepackage{listings}
-% linksbündige Fußboten
 \deffootnote{1.5em}{1em}{\makebox[1.5em][l]{\thefootnotemark}}
-% prevent footnotes from being split over multiple pages
 \interfootnotelinepenalty=10000
-
-\typearea{14} % typearea berechnet einen sinnvollen Satzspiegel (das heißt die Seitenränder) siehe auch http://www.ctan.org/pkg/typearea. Diese Berechnung befindet sich am Schluss, damit die Einstellungen oben berücksichtigt werden
-
-\usepackage{scrhack} % Vermeidung einer Warnung
+\typearea{14}
+\usepackage{scrhack}
 
 
 
@@ -106,7 +81,7 @@ Faculty IV
 
 \vspace{6cm}
 
-July 29, 2017
+July 27, 2017
 
 \end{center}
 

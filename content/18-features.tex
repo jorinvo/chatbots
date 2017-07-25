@@ -13,6 +13,14 @@ At this point it is defined what the example chatbot should be able to do,
 and which technologies are used for its implementation.
 \\
 
+\begin{wrapfigure}{O}{0.3\textwidth}
+  \centering
+  \includegraphics[width=0.28\textwidth]{images/interface/02-getstarted.png}
+	\caption{Get Started Screen}
+	\label{fig:02-getstarted}
+\end{wrapfigure}
+
+
 Before looking at the technical implementation,
 the usage of the chatbot is shown from a user's point of view.
 \\
@@ -33,13 +41,6 @@ or using the web version of Facebook.
 When using the Messenger application as administrator,
 the chatbot can be found by using the search as shown in figure \ref{fig:01-search}.
 \\
-
-\begin{wrapfigure}{O}{0.3\textwidth}
-  \centering
-  \includegraphics[width=0.28\textwidth]{images/interface/02-getstarted.png}
-	\caption{Get Started Screen}
-	\label{fig:02-getstarted}
-\end{wrapfigure}
 
 After navigating to the chatbot,
 a description becomes visible.
@@ -110,6 +111,13 @@ a confirmation message is displayed to keep the user updated about the current s
 This is followed by another message prompting the user to add more words.
 \\
 
+\begin{wrapfigure}{O}{0.3\textwidth}
+  \centering
+  \includegraphics[width=0.28\textwidth]{images/interface/05-stop-adding.png}
+	\caption{Stop adding phrases}
+	\label{fig:05-stop-adding}
+\end{wrapfigure}
+
 For a chatbot it is critical to always keep the user informed about the next expected action,
 therefore most messages should end with a prompt for the next input.
 \\
@@ -117,13 +125,6 @@ therefore most messages should end with a prompt for the next input.
 The image in the middle of figure \ref{fig:04-add} has a button displayed at the bottom of the messages,
 which the user can use as an alternative way for interacting with the chatbot.
 \\
-
-\begin{wrapfigure}{O}{0.3\textwidth}
-  \centering
-  \includegraphics[width=0.28\textwidth]{images/interface/05-stop-adding.png}
-	\caption{Stop adding phrases}
-	\label{fig:05-stop-adding}
-\end{wrapfigure}
 
 As shown in figure \ref{fig:04-add}, three phrases have been added to \emph{Studybot}
 before the user decides to press the button labeled as \textbf{stop adding}.
@@ -160,7 +161,7 @@ the added phrases cannot be studied yet.
 \\
 
 \emph{Studybot} uses a concept known as \emph{spaced repetition system}, or short \emph{SRS},
-which is described as ``a learning technique that incorporates increasing intervals of time between subsequent review of previously learned material in order to exploit the psychological spacing effect''~\cite{srs}.
+which makes use of the so called \emph{spacing effect}. ``Information that is spaced over time is better remembered than the same amount of information massed together''~\cite{srs}.
 \\
 Based on this approach users need to wait before studying newly added vocabulary.
 The more often a phrase is guessed correctly the less frequent the user will be asked to review the phrase.

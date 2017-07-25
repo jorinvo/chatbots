@@ -2,7 +2,7 @@
 \label{platforms}
 
 
-Unless software is distributed on dedicated hardware, software products are designed to be executed by and accessed through other software.
+Unless software is distributed with dedicated hardware, software products are designed to be executed by and accessed through other software.
 The underlying software is the \emph{platform} a product is created for.
 \\
 Products that target operating systems such as \emph{Microsoft Windows} or Apple's \emph{iOS} require users to install necessary executable files on their local system.
@@ -11,7 +11,7 @@ Other software uses the \emph{web} as platform, whereby customers use a \emph{we
 while the software itself is executed on another computer referred to as \emph{server}.
 \\
 
-In the case of chatbots the target platform can be any medium that allows users to send messages to each other.
+In the case of chatbots, the target platform can be any medium that allows users to send messages to each other.
 A chatbot can be seen as a counterpart to interact with in the same way a user interacts with a human counterpart.
 \\
 
@@ -19,38 +19,38 @@ There are numerous platforms available that fulfill these requirements.
 \\
 
 While messaging platforms provide means of communication, chatbots function similar to software accessible via a web browser;
-a server executing the chatbot software is needed and the messaging platform communicates with the server in the same way a web browser does communicate with a server on the user's behalf.
+a server executing the chatbot software is needed and the messaging platform communicates with the server in the same way a web browser communicates with a server on the user's behalf.
 \\
 
 Because of the wide variety of available messaging platforms it is not possible to create an all-encompassing collection of available platforms in the context of this work;
 the following is an overview over the currently most popular platforms, including their capabilities and their area of focus.
 \\
 
-To begin with, one of the most used online communication platforms is \emph{E-mail}.
+One of the most used online communication platforms is \emph{E-mail}.
 \\
-\emph{E-mail} however does not provide the in \ref{defchatbot} on page \pageref{defchatbot} defined characteristics of chatbots to be able to communicate \emph{informally} and in \emph{real time};
+\emph{E-mail} however does not have the characteristics of chatbots, defined in \ref{defchatbot} on page \pageref{defchatbot}, to be able to communicate \emph{informally} and in \emph{real time};
 which disqualifies \emph{E-mail} as a platform for chatbots, even though in practice many use cases of chatbots overlap with the ones that can be solved with the automation of \emph{E-mail}.
 \\
 Although users can choose to express themselves less formally and certain E-mail providers deliver E-mail in a very short time period,
 this statement is based on the current general use case whereby these two attributes are not given.
-Still, it is indeed possible for this characteristics to change in the future
+Still, it is indeed possible for these characteristics to change in the future
 and nothing fundamental about the E-mail protocols is preventing their usage for chatbots.
 \\
 
 A well-known communication technology, which is suited for chatbots, is \emph{Short Message Service}, or \emph{SMS}.
 \\
 \emph{SMS} is primarily used on mobile devices and users are identified by their phone numbers,
-wherefore the communication has to happen through cell network providers.
+wherefore the communication has to happen through cellular network providers.
 However the technology is limited in number of characters, often users are charged by amount of messages sent and communication is limited to text-only.
-``End of year 2009 user level for SMS globally was 78\%, ie 3.6 Billion''~\cite{mobilenumbers} people worldwide,
+``End of year 2009 user level for SMS globally was 78\%, ie 3.6 Billion''~\cite{mobilenumbers} users worldwide,
 which means it remains one of the most popular communication channels;
 and it therefore is an interesting option for applications with a wide-spread audience or applications requiring a low entry barrier.
 \\
 
-Since chatbots can communicate not only via text but also using voice, \emph{phone calls} are also a possible medium.
+Since chatbots can communicate not only via text, but also using voice, \emph{phone calls} are a possible medium too.
 They are a common way of communication available to a large number of people.
 \\
-However, when relying solely on voice for communication without any visual feedback, the design of the user experience has to be thought out especially careful.
+However, for a chatbot that relies solely on voice for communication without any visual feedback, the design of the user experience has to be thought out especially careful.
 Furthermore to not only understand and generate natural language,
 but to also parse and generate voice comes with further technical costs.
 \\
@@ -65,9 +65,9 @@ and in both cases tasks can be delegated to third parties.
 Currently popular target platforms for chatbots are \emph{messenger platforms}.
 \\
 They are primarily text based, they mostly come without cost for end-users and additional to text they often support multimedia formats such as pictures, audio, locations and stickers.
-Some platforms also allow developers to display sliders, buttons and other graphical interface elements, which can help guiding users instead of exclusively relying on natural language for communication.
+Some platforms also allow developers to display sliders, buttons and other graphical interface elements, which can help guiding users instead of exclusively relying on text for communication.
 \\
-At this point it is not feasible to create a comprehensive list of available features for each platform, since the space is innovating constantly and many of the platforms add new features almost every single month.
+At this point it is not feasible to create a comprehensive list of available features for each platform, since the field is innovating constantly and many of the platforms add new features almost every single month.
 \\
 
 Facebook's \emph{WhatsApp} is with one billion active users in January 2017 one of the most popular messenger applications~\cite{fbpopular}.
@@ -78,17 +78,17 @@ The second messenger application belonging to Facebook, called \emph{Facebook Me
 Contrary to WhatsApp, Facebook Messenger provides a platform for developing chatbots.
 \\
 
-Following in popularity~\cite{appusage} are two messenger platforms from China, \emph{QQ Mobile} and \emph{WeChat}.
+Following in popularity~\cite{appusage} are two messenger platforms which are mainly popular in China, \emph{QQ Mobile} and \emph{WeChat}.
 Both of them currently do not provide a specific chatbot platform,
 but there have been successful attempts at creating chatbots for these platforms~\cite{wechatbot}.
 \\
 
-Further popular messenger applications include the Japanese \emph{Line}, Microsoft's \emph{Skype}, \emph{Telegram} and the more business focused \emph{Slack}.
+Further popular messenger applications include the Japan-focused \emph{Line}, Microsoft's \emph{Skype}, \emph{Telegram} and the more business focused \emph{Slack}.
 All of these applications provide dedicated platforms for the development of chatbots.
 \\
 
 The choice of platform primarily depends on the target market.
-Different audiences prefer different platforms and a product might be better suited for certain environments.
+Different audiences prefer different platforms and therefore in certain scenarios one product might be better suited than another.
 
 \begin{figure}[H]
 	\centering
@@ -117,34 +117,34 @@ whereby the interaction between software and platform has to conform to the tech
 There are existing frameworks that allow developers to develop a chatbot once and release it to multiple platforms at the same time without any adjustments to individual platforms.
 \\
 One such framework is \emph{API.ai} by \emph{Google}.
-As of writing it supports 16 different integrations, including platforms such as \emph{Facebook Messenger}, \emph{Skye} and \emph{Slack}~\cite{apiai}.
+As of writing it supports 16 different integrations, including platforms such as \emph{Facebook Messenger}, \emph{Skype} and \emph{Slack}~\cite{apiai}.
 However, this platform is more than an adapter to different platforms.
 It is a complete solution to developing chatbots.
 \emph{API.ai} comes with built-in support for natural language processing,
 a chatbot is already able to have basic conversations out of the box,
 and developers can train chatbots about new topics by just providing example conversations while the framework handles all of the language parsing.
 \\
-Detected keywords and intends can be forwarded to be handled with custom logic;
+Detected keywords and \emph{intends} can be forwarded to be handled with custom logic;
 although for simple use cases this might not be necessary and a chatbot can be developed without writing a single line of code.
 \\
 
-Still, there are limits to platforms like \emph{API.ai}.
+However, there are also limits to platforms like \emph{API.ai}.
 \\
-First, intend parsing is, in the case if \emph{API.ai}, currently limited to a finite list of topics.
+First, \emph{intend parsing} is, in the case if \emph{API.ai}, currently limited to a finite list of topics.
 If a chatbot is handling topics from a domain unknown to \emph{API.ai}, this solution is not sufficient anymore.
 \\
 Further, developers have no control over the applied machine learning and natural language processing algorithms.
 There are no possibilities for customization, if the parsing results or the generated responses do not match the requirements.
 \\
-Additionally, while \emph{API.ai} currently supports 15 different languages, a chatbot is limited to the available languages.
-If a new language needs to be supported, a lot of work might be necessary switching to a custom solution.
+Additionally, while \emph{API.ai} currently supports 15 different languages, a chatbot is limited to these available languages.
+If another language needs to be supported, a lot of work might be necessary because the system needs to be recreated with a custom solution.
 \\
-Another issue to keep in mind is, that, while \emph{API.ai} has support for many platform-specific features such as custom formats for message content and \emph{quick reply} buttons,
+Moreover, an issue to keep in mind is, that, while \emph{API.ai} has support for many platform-specific features such as custom formats for message content and \emph{quick reply} buttons,
 there are unique features of single platforms that are not supported
-and since the space is evolving at such rapid pace future extentions might not be available either.
+and since the space is evolving at such rapid pace future extensions might not be available either.
 \\
-As last point it should be mentioned that, even though \emph{API.ai} is at the moment free to use for everyone,
+Even though \emph{API.ai} is at the moment free to use for everyone,
 they will very likely search for a sustainable business model in the near future.
-This business model could be simply charging for the service or collecting data which Google can use elsewhere, binding customers and gaining market share.
+The business could be sustainable by charging for the service, collecting data which Google can use elsewhere, binding customers to their services and gaining market share.
 \\
 Regardless which monetization strategy is chosen, as a developer one has to be aware that such a service is a non-controllable, external dependency.
