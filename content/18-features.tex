@@ -1,3 +1,4 @@
+\pagebreak
 \section{Features and Interaction Design}
 \label{implementation}
 
@@ -9,9 +10,15 @@
 	\label{fig:01-search}
 \end{wrapfigure}
 
+
 At this point it is defined what the example chatbot should be able to do,
 and which technologies are used for its implementation.
 \\
+
+Before looking at the technical implementation,
+the usage of the chatbot is shown from a user's point of view.
+\\
+
 
 \begin{wrapfigure}{O}{0.3\textwidth}
   \centering
@@ -21,9 +28,6 @@ and which technologies are used for its implementation.
 \end{wrapfigure}
 
 
-Before looking at the technical implementation,
-the usage of the chatbot is shown from a user's point of view.
-\\
 The following is a presentation of the features of the chatbot
 and the design of the interactions to use these features.
 \\
@@ -65,15 +69,16 @@ When pressing the \textbf{Get Started} button, a message is sent to the chatbot,
 and as indicated by the \emph{dots} visible in figure \ref{fig:03-welcome} on the left image,
 the chatbot is active and about to send a reply.
 \\
-In normal conversations the \emph{dots} are used to indicated when a user is typing.
+In normal conversations the \emph{dots} indicate that a user is typing.
 \\
-For chatbots the \emph{dots} indicate that the chatbot received the message and is crafting a reply.
+For chatbots they indicate that the chatbot received the message and is crafting a reply.
 \\
 
 The image in the middle of figure \ref{fig:03-welcome} shows the first message sent to users.
 They are greeted with their first name to create a more personal feeling atmosphere.
 The greeting is followed by two sentences explaining the chatbot.
 \\
+
 When working with text as a medium, it is especially critical to focus on the most important information.
 In graphical interfaces users can get an impression with a single glance,
 but to perceive the meaning of text users need to read word by word.
@@ -101,13 +106,12 @@ The instructions are additionally illustrated by providing an example for a mess
 At this point the user needs to interact with the chatbot.
 \\
 Figure \ref{fig:04-add} shows how a user adds phrases to \emph{Studybot}.
-When typing a phrase, users first type the phrase in the foreign language they like to study,
-then a \emph{line-break} needs to be added,
-and the next line contains an explanation for the preceding phrase.
+To begin, users first type the phrase in the foreign language they would like to study,
+they then add a \emph{line-break},
+and finally add an explanation for the preceding phrase on the next line.
 \\
 After the phrase is sent to the chatbot,
-a confirmation message is displayed to keep the user updated about the current state of the system.
-\\
+a confirmation message is displayed to keep the user updated about the current state.
 This is followed by another message prompting the user to add more words.
 \\
 
@@ -122,19 +126,17 @@ For a chatbot it is critical to always keep the user informed about the next exp
 therefore most messages should end with a prompt for the next input.
 \\
 
-The image in the middle of figure \ref{fig:04-add} has a button displayed at the bottom of the messages,
-which the user can use as an alternative way for interacting with the chatbot.
+Figure \ref{fig:04-add} show how a user adds three phrases to \emph{Studybot}.
+The image in the middle has a button labeled as \textbf{stop adding} displayed at the bottom of the messages,
+which users can use as an alternative way for interacting with the chatbot, when they wish to stop adding phrases.
 \\
 
-As shown in figure \ref{fig:04-add}, three phrases have been added to \emph{Studybot}
-before the user decides to press the button labeled as \textbf{stop adding}.
-\\
 Figure \ref{fig:05-stop-adding} shows, that after stopping the adding of phrases, the user is prompted with an array of four possible actions.
 The actions are labeled as \textbf{study}, \textbf{+ phrases}, \textbf{help} and \textbf{done}.
-Each button label also contains an emoji\footnote{``Emoji are pictographs (pictorial symbols) that are typically presented in a colorful form and used inline in text. They represent things such as faces, weather, vehicles and buildings, food and drink, animals and plants, or icons that represent emotions, feelings, or activities.''~\cite{emoji}} used as icon for the action to make it easier identifiable for users.
+Each button label also contains an emoji\footnote{``Emoji are pictographs (pictorial symbols) that are typically presented in a colorful form and used inline in text. They represent things such as faces, weather, vehicles and buildings, food and drink, animals and plants, or icons that represent emotions, feelings, or activities.''~\cite{emoji}} used as icon for the action to make it easier to recognize for users.
 \\
 When the usage of graphical elements is limited and one has to rely mainly on text for communication,
-emojis can be a helpful substitution for traditional icons to provide visual guidance.
+emojis can be a helpful substitution for traditional icons to provide graphical guidance.
 \\
 
 The chatbot has different \emph{modes} of interaction.
@@ -154,10 +156,10 @@ and entered the \emph{menu mode} which provides access to other modes.
 \end{figure}
 
 By clicking on the button labeled \textbf{study},
-the user switches to the \emph{mode} for studying of the added vocabulary.
+the user switches to the \emph{mode} for studying of the previously added vocabulary.
 \\
 However, as the image on the left of figure \ref{fig:06-enable-notify} shows,
-the added phrases cannot be studied yet.
+the only recently added phrases cannot be studied yet.
 \\
 
 \emph{Studybot} uses a concept known as \emph{spaced repetition system}, or short \emph{SRS},
@@ -187,7 +189,7 @@ The platform policy of \emph{Facebook Messenger} clearly requires to
 which means that there needs to be a way for users to disable the sending of notifications.
 Further the platform policy clarifies that ``you may message people within 24 hours of a person's interaction with your business or Bot ..., and until the next interaction, you may send one additional message after this 24 hour period in order to follow up on your conversation''~\cite{fbpolicy}.
 \\
-How notifications can be disabled in \emph{Studybot} is not further explained here,
+How notifications can be disabled in \emph{Studybot} will not be further explained here,
 but an illustration of the feature can be found in the appendix in figure \ref{fig:10-disable-notify} on page \pageref{fig:10-disable-notify}.
 \\
 
@@ -221,13 +223,15 @@ and during studying is the only possible moment to refer to a phrase.
 The figures \ref{fig:07-notify-study} and \ref{fig:08-study-done} show a subtle decision to display the buttons users are most likely to interact with
 on the right side.
 \\
-Since the English language is written from left to right and we scan text accordingly,
-it is more intuitive to show the most important information on the left,
-however certain interactions, like studying, need to be performed so frequently,
+
+The current interface language is English and it is written from left to right.
+Since humans scan the interface in the same order as they read,
+it is more intuitive to show the most important information on the left.
+However certain interactions, like studying, need to be performed so frequently,
 that a user will remember the location of the buttons quickly and does not need to \emph{scan} the interface every single time.
 \\
 In this scenario it is helpful to have the most used action on the right side, because the majority of humans are right-handed \cite{righthand},
-and they can therefore reach the buttons on the right with less effort since they are closer to the thumb when using a mobile phone single-handed.
+and they can therefore reach the buttons on the right with less effort since they are closer to the thumb when using a mobile phone with a single hand.
 \\
 
 \begin{figure}[h]

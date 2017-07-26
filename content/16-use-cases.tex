@@ -42,7 +42,7 @@ He found the chatbot on a news website for technology products,
 and since then whenever Pierre learns a new word he grabs his phone from his pocket and adds the word to the chatbot.
 Since the chatbot has no restrictions on what to learn, Pierre uses it to save both, German and English, vocabulary in one place.
 Pierre's daily commute from and to work takes 40 minutes twice a day.
-Now he uses his commute time to take out his phone and review new vocabulary he picked up the previews days.
+Now he uses his commute time to take out his phone and review new vocabulary he picked up the previous days.
 \\
 
 
@@ -55,24 +55,23 @@ All necessary functional requirements can be extracted from the above defined us
 First, a user needs to be able to add new vocabulary.
 \\
 There should not be any restrictions on what can be added
-and vocabulary should not be limited to single words because in many cases it is more helpful
+and vocabulary should not be limited to single words, because in many cases it is more helpful
 to add whole phrases instead.
 \\
-Each vocabulary consists of the phrase the user is trying to remember
+Each vocabulary consists of the phrase the user tries to memorize
 and an explanation to help understanding the meaning of the phrase.
 \\
 
-Next, the chatbot requires a way to revise vocabulary.
+Next, the chatbot should provide a way to revise vocabulary.
 \\
 There should be two possible modes for revising;
-one version where users can decide on their own if they remembered the phrase correctly
-and when to go to the next phrase,
-and a second way whereby users type out the phrase in the messenger application.
+one where users can click a button to tell whether they remembered the phrase correctly or not,
+and a second mode whereby users type out the phrase themselves.
 \\
 In each case the system should keep track of whether users knew the correct solution or not.
 \\
 
-Lastly, it is necessary to have a means of deciding what to study next.
+Lastly, it is necessary to determine what to study next.
 \\
 A user should not be required to think about what or when to review vocabulary.
 The chatbot needs a system to decide the review time for each vocabulary,
@@ -93,18 +92,20 @@ is mostly independent from this particular product and can be applied to the dev
 Since this is a simple example, non-functional requirements remain minimal.
 \\
 
-\emph{Availability} of the service is not a priority, but chatbot software can be scaled similar to other software and redundancy can be used to ensure availability.
+\emph{Availability} of the service is not a priority, but chatbot software can be scaled similar to other software,
+and redundancy can be used to ensure availability.
 \\
-Since messaging platforms are an intermediary between users and the chatbot software, most platforms also re-send missed messages in case the chatbot is unavailable, which further lessens the priority of availability.
+Since messaging platforms act as intermediary between users and the chatbot software, most platforms also re-send missed messages in case the chatbot is unavailable.
+That the platform ensures availability, further lessens the priority to address it in the chatbot software itself.
 \\
 
-Similarly, \emph{security} is not a main focus here since the dependence on a messaging platform ensures certain factors such as authentication and encryption of communication.
+Similarly, \emph{security} is not a main focus here, because the messaging platform itself already handles certain security-sensitive functionality such as authentication and encryption of communication. A production scenario, though, would require further care for securing the service.
 \\
 
-\emph{Performance} is equally not a major concern at this point.
+\emph{Performance} is equally not a major concern.
 \\
-Because the scope of the example application is limited and the functionality simple,
-the domain specific logic is inexpensive in computation.
+Because the scope of the example application is limited,
+the domain specific logic remains inexpensive in computation.
 \\
 The main performance bottleneck is the in \ref{limitations} on page \pageref{limitations} mentioned aspect of networking and involved unknown parties.
 \\
@@ -113,7 +114,7 @@ but performance can be improved by choosing geographically strategic located dat
 \\
 
 A more central requirement is \emph{reusability}.
-Although the example is a chatbot solving a specific task,
+Although the example focuses on solving a specific task,
 the software architecture should be designed in a way,
 that appropriate parts can be reused for other chatbots in the future.
 \\
@@ -122,4 +123,4 @@ To ensure reusability the software should be \emph{documented}, \emph{stable} an
 
 \emph{Usability} can be seen as the most important non-functional requirement.
 \\
-The focus of developing the example chatbot is to design a good user experience and to explore how interface and interaction design is work for this medium.
+The focus of developing the example chatbot is to design a good user experience and to explore how interface and interaction design can be best accomplished with the given medium.
