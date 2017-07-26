@@ -35,7 +35,7 @@ Both servers use the \emph{store} to fetch data and they therefore depend on pac
 \\
 Package \textbf{admin} only provides functionality for internal use by the administrators of the chatbot;
 one of its main responsibilities is to handle communication with \emph{Slack}
-for the in \ref{slackhook} on page \pageref{slackhook} mentioned \emph{feedback} feature.
+for the \emph{feedback} feature, which was mentioned in \ref{slackhook} on page \pageref{slackhook}.
 \\
 
 Package \textbf{messenger} is responsible for processing all events received from the \emph{Facebook Messenger platform}
@@ -77,11 +77,11 @@ The function \emph{HandleEvent}, which can be seen in figure \ref{fig:call-graph
 is called by package \textbf{fbot} with every event the WebHook receives,
 and it is the main entry-point to the chatbot logic.
 \\
-Depending on the type of event,
+By handling different types of events,
 \emph{HandleEvent} tracks whenever a user reads a message,
-or it sends a message back to the user,
+and it sends a message back to users,
 whereby it needs to be differentiated between handling text messages
-or predefined buttons.
+and predefined buttons.
 \\
 
 In addition to directly responding to users,
@@ -99,7 +99,7 @@ This is used to send replies from \emph{Slack} back to users.
 \\
 
 Separating and containing logic specific to the chosen platform, in this case \emph{Facebook Messenger},
-makes it easier to adopt the chatbot to new platforms in the future.
+simplifies adopting the chatbot to new platforms in the future.
 \\
 
 Call graphs for the packages \textbf{main}, \textbf{admin} and \textbf{fbot} can be found in the appendix starting on page \pageref{a:call-graph}.
@@ -112,7 +112,7 @@ The development of a chatbot can be summarized as being a slight variation of al
 \\
 Chatbot software is fundamentally a server accepting \emph{HTTP requests} from a messenger platforms and sending \emph{HTTP responses} back to the messenger platform.
 \\
-Developing such a system should feel familiar to all developers that have in the past created web applications with server-side rendering,
+Developing such a system should be familiar for developers who have created web applications with server-side rendering in the past,
 since state management and request processing work in the same manner.
 \\
 While the receiving of user events can be approached with known patterns, the sending of replies back to users requires a paradigm shift in thinking.
