@@ -2,14 +2,12 @@
 
 
 Building on the analysis of existing solutions in \ref{existing} on page \pageref{existing}, features for the chatbot need to be specified.
-\\
 An effective method for gathering crucial features is to find potential users
 and create usage scenarios for their individual needs.
 \\
 
 To apply this method, the fundamental problem the application is solving needs to be defined first.
 \\
-
 The issue this chatbot is trying to help with is the study of individual vocabulary.
 The goal is not to provide studying material in a way a language course or a textbook does,
 but instead to complement these resources with a tool to study new vocabulary and phrases students pick up
@@ -51,38 +49,28 @@ Now he uses his commute time to take out his phone and review new vocabulary he 
 
 All necessary functional requirements can be extracted from the above defined user stories.
 \\
-
 First, a user needs to be able to add new vocabulary.
-\\
 There should not be any restrictions on what can be added
 and vocabulary should not be limited to single words, because in many cases it is more helpful
 to add whole phrases instead.
-\\
 Each vocabulary consists of the phrase the user tries to memorize
 and an explanation to help understanding the meaning of the phrase.
 \\
-
 Next, the chatbot should provide a way to revise vocabulary.
-\\
 There should be two possible modes for revising;
 one where users can click a button to tell whether they remembered the phrase correctly or not,
 and a second mode whereby users type out the phrase themselves.
-\\
 In each case the system should keep track of whether users knew the correct solution or not.
 \\
-
 Lastly, it is necessary to determine what to study next.
-\\
 A user should not be required to think about what or when to review vocabulary.
 The chatbot needs a system to decide the review time for each vocabulary,
 and ideally the user is notified when vocabulary is ready to be reviewed by sending a message to the user.
 \\
-
 These three main features can be seen as a sufficient \emph{minimal viable product}, or \emph{MVP}.
 \\
 
 For demonstration purposes it is desired to keep the product as simple as possible.
-\\
 The knowledge that can be taken from making decisions about the implementation and walking through the process of creating the chatbot,
 is mostly independent from this particular product and can be applied to the development of other chatbot products.
 
@@ -91,36 +79,25 @@ is mostly independent from this particular product and can be applied to the dev
 
 Since this is a simple example, non-functional requirements remain minimal.
 \\
-
 \emph{Availability} of the service is not a priority, but chatbot software can be scaled similar to other software,
 and redundancy can be used to ensure availability.
-\\
 Since messaging platforms act as intermediary between users and the chatbot software, most platforms also re-send missed messages in case the chatbot is unavailable.
 That the platform ensures availability, further lessens the priority to address it in the chatbot software itself.
 \\
-
 Similarly, \emph{security} is not a main focus here, because the messaging platform itself already handles certain security-sensitive functionality such as authentication and encryption of communication. A production scenario, though, would require further care for securing the service.
 \\
-
 \emph{Performance} is equally not a major concern.
-\\
 Because the scope of the example application is limited,
 the domain specific logic remains inexpensive in computation.
-\\
 The main performance bottleneck is the in \ref{limitations} on page \pageref{limitations} mentioned aspect of networking and involved unknown parties.
-\\
 Employing performance-improving solutions for networking issues won't be a part of the example chatbot,
 but performance can be improved by choosing geographically strategic located data centers for deploying the chatbot software.
 \\
-
 A more central requirement is \emph{reusability}.
 Although the example focuses on solving a specific task,
 the software architecture should be designed in a way,
 that appropriate parts can be reused for other chatbots in the future.
-\\
 To ensure reusability the software should be \emph{documented}, \emph{stable} and \emph{extensible}.
 \\
-
 \emph{Usability} can be seen as the most important non-functional requirement.
-\\
 The focus of developing the example chatbot is to design a good user experience and to explore how interface and interaction design can be best accomplished with the given medium.

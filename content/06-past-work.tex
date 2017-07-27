@@ -4,8 +4,7 @@
 Before exploring new technology one should examine prior work and learn from past ideas, both succeed and also failed attempts.
 \\
 This section presents a selection of events from the last century, which introduced the ideas that formed the present definition of a chatbot.
-\\
-It should be noted that this is not an attempt to give an all-encompassing overview about the history of computing,
+It is not an attempt to give an all-encompassing overview about the history of computing,
 instead the aim is to explain where the concept of chatbots and the interest of creating them originated from.
 
 
@@ -26,12 +25,11 @@ The test subject does not know upfront which party is a machine and which one is
 During the \emph{game} the human interacts with the other party
 only through textual messages,
 but is free to use any variation of messages.
-\\
 If the human is not able to tell which of the two parties is a machine and which one is a human, the machine passes the \emph{Turing Test}.
 \\
-
 When creating a chatbot or another kind of artificial intelligence this test can still be applied to test the \emph{human-likeliness} of the created machinery.
 \\
+
 While Alan Turing did not invent the first chatbot, the \emph{Turing Test} was a crucial motivation for the following developments
 and even today the test still remains to be challenged by new systems.
 
@@ -41,14 +39,14 @@ and even today the test still remains to be challenged by new systems.
 
 Fourteen years after the Turing Test was introduced, Joseph Weizenbaum started working on what would be known as the first program to pass a variation of the Turing Test.
 Joseph Weizenbaum began working at \emph{MIT Artificial Intelligence Laboratory} in 1964 and released the \emph{ELIZA} program in 1966.
+Thus it can be considered as the first known creation of a chatbot.
 \\
-Thus \emph{ELIZA} can be considered as the first known creation of a chatbot.
+
+\emph{ELIZA} creates responses to messages that a user inputs via a text-based terminal.
 \\
 
 The original version of \emph{ELIZA} was written in a programming language called \emph{MAD-Slip},
 which was also created by Joseph Weizenbaum himself, and ran on the \emph{IBM 704} computer.
-\\
-\emph{ELIZA} creates responses to messages that a user inputs via a text-based terminal.
 \\
 
 The most famous implementation of \emph{ELIZA} is called \emph{DOCTOR} and simulates a \emph{Rogerian psychotherapist}.
@@ -61,7 +59,6 @@ Furthermore clients mostly keep the assumption that a therapist has specific int
 
 \emph{ELIZA} takes advantage of the structure of the English language;
 the program takes apart sentences via pattern matching and keywords, and reuses phrases after substituting certain words.
-\\
 For example, a client's answer ``Well, my boyfriend made me come here.'' can be transformed to ``Your boyfriend made you come here?''~\cite{elizatest}.
 \\
 Certain signal words and also sentences containing no signals words can be answered with generic, static phrases.
@@ -69,7 +66,6 @@ Detecting the signal word ``alike'' in the sentence ``Men are all alike.'' \emph
 \\
 
 Knowing about the nature of Rogerian psychotherapy, Joseph Weizenbaum created \emph{ELIZA} initially intended as a parody to demonstrate the simple behavior necessary for imitating this therapy.
-\\
 He was surprised that even people who knew about the inner workings of the program ended up having serious conversations with \emph{ELIZA}.
 In one anecdote Joseph Weizenbaum told how his secretary, after starting a conversation with \emph{ELIZA,} asked him: ``Would you mind leaving the room, please?''~\cite[5]{weizenbaum}.
 \\
@@ -77,9 +73,7 @@ In one anecdote Joseph Weizenbaum told how his secretary, after starting a conve
 Led by the success of the experiment he published the book \emph{Computer power and human reason: from judgment to calculation} in 1976,
 which presents his thoughts about artificial intelligence,
 including the differences between machines and humans and the limits of computer intelligence.
-\\
 In the book he admits that he had not realized ``that extremely short exposures to a relatively simple computer program could induce powerful delusional thinking in quite normal people''~\cite{bbcnowthen}.
-\\
 This idea coined the term \emph{Eliza Effect} which describes, that people quickly assume computers to behave like humans.
 This term is still in use today.
 
@@ -87,23 +81,17 @@ This term is still in use today.
 \subsection{After 1970}
 
 Another famous program was published by the psychiatrist Kenneth Colby in 1972.
-\\
 He created \emph{PARRY} as an attempt to simulate a human with paranoid schizophrenia.
 The implementation of \emph{PARRY} is far more complex than \emph{ELIZA},
 but it also models a personality including concepts of how to conduct conversations.
-\\
 The most famous demonstration of \emph{PARRY} was at the first \emph{International Conference on Computer Communications} (ICCC) in 1972 where \emph{PARRY} and \emph{ELIZA} had a conversation with each other~\cite{internethistory}.
-\\
 Later on in scientific experiments \emph{PARRY} also passed a version of the \emph{Turing Test}.
 \\
 
-Further programs that have been created to pass the \emph{Turing Test} and which gained the public's attention include
-\\
-\emph{Jabberwacky} which was started in 1988 and attempted to learn from the user's input~\cite{jabberwacky},
-\\
-the in 1991 as an \emph{ELIZA}-like demonstration for a sound card released \emph{Dr. Sbaitso} which was one of the first chatbots for MS-DOS based personal computers~\cite{pcmag},
-\\
-and \emph{A.L.I.C.E.}, which has been released in 1995 and became famous for its realistic behavior, that is based on heuristic patterns instead of static rules~\cite{approximatinglife}.
+Further programs have been created to pass the \emph{Turing Test} and gained the attention of the public.
+\emph{Jabberwacky} was started in 1988 and attempted to learn from the user's input~\cite{jabberwacky}.
+In 1991 \emph{Dr. Sbaitso} was released as an \emph{ELIZA}-like demonstration for a sound card, which was one of the first chatbots for MS-DOS-based personal computers~\cite{pcmag}.
+And \emph{A.L.I.C.E.} has been released in 1995 and became famous for its realistic behavior, that is based on heuristic patterns instead of static rules~\cite{approximatinglife}.
 \\
 
 The origin of the term \emph{chatbot} itself can be seen in a paper called ``ChatterBots, TinyMuds, and the Turing Test: Entering the Loebner Prize Competition'' published by Michael L. Mauldin in 1994, whereby \emph{chatbot} can be seen as a variation of the original term \emph{ChatterBots}~\cite{aiconf}.
@@ -111,5 +99,5 @@ The origin of the term \emph{chatbot} itself can be seen in a paper called ``Cha
 
 Up until today the \emph{Turing Test} has only been passed limited to certain domains, and there is no chatbot yet that is able to simulate general human behavior indistinguishably from real human beings.
 \\
-It needs to be noted that, although creating an as human-like as possible system remains a popular challenge, not all applications of chatbots benefit from this type of behavior.
+But, although creating an as human-like as possible system remains a popular challenge, not all applications of chatbots benefit from this type of behavior.
 Many systems are instead optimized to provide quick and efficient interactions and behave accordingly without attempting to hide their artificiality.

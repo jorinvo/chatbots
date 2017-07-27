@@ -12,23 +12,18 @@ As discussed in \ref{communication} on page \pageref{communication},
 there are two fundamental ways for communicating with a user,
 interface elements and natural language.
 \\
-
 Since the previous defined features for the minimal viable product of the example chatbot require not many options,
 everything can be represented with unambitious interface elements.
 \\
-
 However, complimentary to guiding the user with interface elements
 natural language is required to capture user input.
 When adding new vocabulary, phrases and their explanations need to be captured,
 and likewise, when studying the user's guesses need to be evaluated.
 \\
-
 The implementation of this chatbot demonstrates the complementing use of interface elements and natural language side by side.
 \\
-
-By relying only on simple input parsing and no advanced natural language processing techniques,
+By relying solely on simple input parsing and no advanced natural language processing techniques,
 a major source of complexity of chatbot development can be avoided.
-\\
 While there are useful techniques that enable previous impossible use cases,
 they are not necessary to explore the fundamentals and paradigms of chatbot development.
 \\
@@ -38,8 +33,6 @@ they are not necessary to explore the fundamentals and paradigms of chatbot deve
 An important question to answer when developing a chatbot is which platform to target.
 As shown in \ref{platforms} on page \pageref{platforms} there are many possible target platforms
 and some of them are fundamentally different to others.
-\\
-
 Deciding for a voice-based platform like \emph{Alexa}, for \emph{SMS} or for a messenger platform has consequences
 for all further decisions.
 \\
@@ -48,18 +41,14 @@ users should be able to control the precise spelling of the vocabulary
 and further, there is currently no voice-based platform available
 that supports multiple languages simultaneously.
 \\
-
 \emph{SMS} communication is better suited for scenarios that only need to send a low number of messages,
 since there are costs for each sent text message.
-\\
 As of writing, \emph{Twilio}, a cloud communications service, charges \$0.0075 for receiving and \$0.085 for sending a message when using their \emph{Global Short Message Service API} in Germany~\cite{twilio}.
-\\
 Supposed the chatbot has 1000 active users that all study 100 phrases daily,
 the costs would accumulate to \$277,500 of monthly expenses\footnote{$1000\times100\times30\times(0.085+0.0075)=277,500$}.
 These prices are affordable if a company is selling airplane tickets or something similar,
 but in other scenarios another messaging platform will be a better option.
 \\
-
 By choosing a messaging application as target platform, there are no monthly costs to be taken care of.
 Additionally there are further interface elements than only plain text available for interaction.
 But there are many major existing messaging applications, therefore deciding for one can be difficult.
@@ -67,12 +56,10 @@ But there are many major existing messaging applications, therefore deciding for
 As shown in \ref{geography} on page \pageref{geography}, different platforms have geographically different target markets.
 If a chatbot targets the Chinese market \emph{WeChat} would be the obvious platform to choose;
 likewise Japan would be targeted by using\emph{ Line}.
-\\
 In North America and Europe \emph{Facebook Messenger} and \emph{Facebook's WhatsApp} are currently the leading platforms.
 Since as of writing, \emph{WhatsApp} does not provide publicly available access to the platform,
 \emph{Facebook Messenger} is the biggest platform one can currently target.
 \\
-
 As mentioned in \ref{crossplatform} on page \pageref{crossplatform},
 there are also solutions to create chatbots using a framework that allows to release a chatbot to multiple platforms at the same time,
 but as previously noted such a framework also has drawbacks.
@@ -85,24 +72,19 @@ The registration and configuration of a chatbot for \emph{Facebook Messenger} is
 since Facebook's online documentation already covers detailed explanations
 and the majority of the settings are specific to each chatbot.
 \\
-
 Facebook refers to a chatbot in \emph{Messenger} simply as \emph{bot},
 and to create a \emph{Messenger bot} it is required to initially create a \emph{Facebook Page} and an \emph{application} for the page.
 Afterwards \emph{Messenger} can be added as a \emph{product} to the application.
-\\
 Further information can be found in the developer documentation.\footnote{https://developers.facebook.com/products/messenger}
 
 \subsubsection{Integration}
 
 The development of a chatbot for \emph{Facebook Messenger} is similar to most other platforms.
-\\
 When creating and configuring a chatbot, the developer registers a \emph{WebHook}.
 ``The concept of a WebHook is simple. A WebHook is an HTTP callback: an HTTP POST that occurs when something happens; a simple event-notification via HTTP POST''~\cite{webhook}.
-\\
 After the setup was successful,
 Facebook sends \emph{HTTP POST} requests to the registered URL containing event information for every message a user sends to the chatbot.
-\\
-This way developers has complete control over handling each message on an arbitrary machine that is reachable via a public URL.
+This way developers have complete control over handling each message on an arbitrary machine that is reachable via a public URL.
 
 
 \subsection{Server Technology}
@@ -118,11 +100,9 @@ there is no restriction on which programming language to use as long as it can b
 \\
 Chatbots can be written in any programming language.
 \\
-
 Depending on the specific application, different programming languages are better suited than others.
 \\
 In the example case there are not many specific technological requirements.
-\\
 However, to be able to send notifications to users when their studies are ready,
 the system requires a way to schedule timers.
 The timers need to be lightweight enough to be re-scheduled for every user activity
@@ -132,16 +112,12 @@ Single-threaded programming languages, such as Python, Ruby or PHP,
 mostly use separate worker processes to handle scheduled jobs,
 but in this case there would need to be a worker process for each user
 waiting until it is time to send notifications to the specific user.
-\\
 Another way to handle this in single-threaded programming languages is by using a system for \emph{asynchronous, evented I/O},
 such as the \emph{asyncio} module for \emph{Python}~\cite{asyncio} or the \emph{Node.js} JavaScript runtime~\cite{nodejs}.
 \\
-
 The example chatbot is created with the \emph{Go} programming language~\cite{golang}.
-\\
 Go is a multi-threaded language which allows for taking advantage of all available CPUs
 on a machine without the overhead of creating new processes.
-\\
 It is well suited for scheduling notifications and Go includes a robust web server in the \emph{standard library} which can be exposed to the public Internet without a proxy server, which is a common approach with the previous mentioned programming languages.
 \\
 With this setup there are less moving parts to take care of and the example can be a simple, self-contained application.
@@ -153,24 +129,18 @@ With this setup there are less moving parts to take care of and the example can 
 In the example case data needs to be stored and it should be stored locally on the same machine
 to keep the application simple.
 \\
-
 Since a user can save new vocabulary,
 there needs to be a way to store information for each user.
-\\
 For the studying itself, further information has to be stored.
 It is necessary to keep track of correct and incorrect user reviews, it needs to be decided when to study next and the time of the last study needs to be tracked too.
 \\
-
 To send notifications additional information has to be stored.
-\\
 It is necessary to know when the user was last active and if the user saw the last notification.
 Notifications should only be send when the user is not currently active and saw the last notification.
 \\
-
 All of the required information is always bound to a single user.
 Users can never share information with each other.
 There are no further relations in the data.
-\\
 Without relational data the features that relational databases such as \emph{MySQL} or \emph{PostgreSQL} provide are not used;
 instead a simple key-value store can be sufficient for storing the data.
 \\
